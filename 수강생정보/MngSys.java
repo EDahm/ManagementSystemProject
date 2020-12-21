@@ -3,10 +3,11 @@ package Project;
 import java.util.*;
 
 public class MngSys {
+	Scanner s = new Scanner(System.in);
 
-	ArrayList<Student> stu = new ArrayList<Student>();
-	
 //--------------------------------------------------------------------기존 수강생
+	ArrayList<Student> stu = new ArrayList<Student>();
+
 	public void currentStudent() {
 		stu.add(new Student("정혜윤", "여", 921014, "010-9874-3867", "취성패", 01, 60));
 		stu.add(new Student("황규리", "여", 921014, "010-9874-3867", "취성패", 01, 60));
@@ -15,10 +16,8 @@ public class MngSys {
 		stu.add(new Student("정혜윤", "여", 921014, "010-9874-3867", "취성패", 01, 60));
 	}
 
-
 //----------------------------------------------------------------------수강생 추가
 	public void addStudent() {
-		Scanner s = new Scanner(System.in);
 
 		System.out.print("이름 : ");
 		String name = s.next();
@@ -51,7 +50,6 @@ public class MngSys {
 
 	}
 
-
 //-------------------------------------------------------------------------전체수강생조회
 	public void printStu() {
 
@@ -82,8 +80,69 @@ public class MngSys {
 		}
 	}
 	
+	
+	  public void removeStu() {
+		  System.out.println("---------------------------------------------------------");
+		  printStu();
+		  System.out.println("---------------------------------------------------------");
+		  System.out.print("삭제할 수강생의 이름을 입력해주세요>>");
+	      String remStu = s.next();
+	      
+	      for (int i = 0; i < stu.size(); i++) {
+			if(stu.get(i).name.equals(remStu))
+				stu.remove(i);
+		}
+	      System.out.println("\n[system] 삭제가 완료되었습니다.");
+	      printStu();
+	      
+	   }
+
+	  
+	  
+////////////////////////////////////////////////////////////////////////////////////
+//------------------------------------------------------------------강의 목록
+	  
+		ArrayList<Class> lecture = new ArrayList<Class>();
+		
+		public void classList(){
+			lecture.add(new Class("풀스택 개발자 양성과정", "이춘희, 박미", "월-금 / 09:20 - 18:00", "302호", "2020-10-15 ~ 2021-03-11"));
+			lecture.add(new Class("출판디자인(디지털퍼블리싱)", "김철수", "월-금 / 10:00 - 14:00", "501호", "2020-12-01 ~ 2021-01-31"));
+			lecture.add(new Class("환경(인테리어) 3D디자인", "박철수", "월,수,금 / 13:10 - 17:00", "303호", "2020-11-04 ~ 2021-12-24"));
+		}
+		
+		
+//----------------------------------------------------------------강의 세부사항
+		public void printClass(int num) {
+			System.out.println("-------------------------------------");
+			System.out.println("강의명 : " + lecture.get(num-1).name);
+			System.out.println("담당강사 : " + lecture.get(num-1).professor);
+			System.out.println("시간표 : " + lecture.get(num-1).time);
+			System.out.println("강의실 : " + lecture.get(num-1).classroom);
+			System.out.println("기간 : " + lecture.get(num-1).date);
+			System.out.println("-------------------------------------");
+			
+			System.out.println("[1] 수강생 명단 조회");
+			System.out.println("[0] 상위메뉴");
+			System.out.println("-------------------------------------");
+			System.out.print(">> ");
+			int pcNum = s.nextInt();
+			
+			System.out.println();
+			switch (pcNum) {
+//			case 1:
+//				subsubMenu();
+//				break;
+			case 0:
+				subMenu02();
+				break;
+			}
+			
+		}
+	  
+	  
 //--------------------------------------------------------------------------MENU
-//----------------------------------------------------강의목록	
+	  
+	  
 	public void lectureMenu() {
 		System.out.println("[1] 풀스택 개발자 양성과정");
 		System.out.println("[2] 출판디자인(디지털퍼블리싱)");
@@ -93,7 +152,6 @@ public class MngSys {
 		System.out.println("[6] 국가공인 ITQ자격증(한글/엑셀/PPT) 취득");
 		System.out.println("[0] 상위메뉴");
 	}
-	
 	
 	public void start() {
 
@@ -204,11 +262,16 @@ public class MngSys {
 			}
 
 			System.out.println();
-			switch (subNum2) {
-			case 0:
+			if (subNum2 == 0) {
 				start();
 				break;
 			}
+			
+			if (subNum2 >= 1 && subNum2 <= 6) {
+				classList();
+				printClass(subNum2);
+			}
+			
 
 		}
 	}
