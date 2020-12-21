@@ -1,7 +1,7 @@
 package shopping;
 
 public class CellPhone extends Product {
-	String carrier;		//Ελ½Ε»η
+	String carrier;		//
 	
 	public CellPhone(String pname, int price, String carrier) {
 		this.pname = pname;
@@ -10,6 +10,6 @@ public class CellPhone extends Product {
 	}
 	@Override
 	public void printExtra() {
-		System.out.println("Ελ½Ε»η : " + carrier);
+		System.out.println("Γ…Γ«Β½Γ…Β»Γ§ : " + carrier);
 	}
 }
