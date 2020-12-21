@@ -83,6 +83,18 @@ public class MngSys {
 	}
 	
 //--------------------------------------------------------------------------MENU
+//----------------------------------------------------강의목록	
+	public void lectureMenu() {
+		System.out.println("[1] 풀스택 개발자 양성과정");
+		System.out.println("[2] 출판디자인(디지털퍼블리싱)");
+		System.out.println("[3] 환경(인테리어) 3D디자인");
+		System.out.println("[4] AutoCAD 투상법");
+		System.out.println("[5] 사무행정 및 포토샵 활용");
+		System.out.println("[6] 국가공인 ITQ자격증(한글/엑셀/PPT) 취득");
+		System.out.println("[0] 상위메뉴");
+	}
+	
+	
 	public void start() {
 
 		while (true) {
@@ -180,13 +192,7 @@ public class MngSys {
 	public void subMenu02() {
 		while (true) {
 			System.out.println("-------------------------------------");
-			System.out.println("[1] 풀스택 개발자 양성과정");
-			System.out.println("[2] 출판디자인(디지털퍼블리싱)");
-			System.out.println("[3] 환경(인테리어) 3D디자인");
-			System.out.println("[4] AutoCAD 투상법");
-			System.out.println("[5] 사무행정 및 포토샵 활용");
-			System.out.println("[6] 국가공인 ITQ자격증(한글/엑셀/PPT) 취득");
-			System.out.println("[0] 상위메뉴");
+			lectureMenu();
 			System.out.println("-------------------------------------");
 			System.out.print(">> ");
 			int subNum2 = s.nextInt();
