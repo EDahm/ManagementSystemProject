@@ -1,0 +1,91 @@
+
+
+// ---------------------------------- 메인클래스에 추가
+public void resetStu() {
+    Scanner s = new Scanner(System.in);
+    System.out.println("수정 하고 싶은 이름을 입력해주세요>>");
+    String setStu = s.next();
+    
+    
+    for (int i = 0; i < stu.size(); i++) {
+    	if(stu.get(i).name.equals(setStu)) {
+    		System.out.println("수정할 항목을 선택해주세요");
+        	System.out.println("[1]이름");
+        	System.out.println("[2]성별(남성/여성)");
+        	System.out.println("[3]생일(991231)");
+        	System.out.println("[4]번호(010-1234-5678)");
+        	System.out.println("[5]수강 유형(일반/취성패)");
+    		System.out.println("[6]수강강좌");
+        	System.out.println("[7]성적");
+        	int setM = s.nextInt();
+        	
+        	if(setM == 6) {
+
+        	}
+        	
+        	System.out.println("수정할 값을 입력해주세요.");
+        	String resetS ="";
+        	int resetI = 0;
+        	
+        	switch (setM) {
+        	case 1: case 2: case 4: case 5: resetS = s.next(); break;
+        	
+        	case 6: System.out.println("수강강좌(번호선택)");
+    			System.out.println("[01]풀스택 개발자 양성과정");
+    			System.out.println("[02]출판디자인(디지털퍼블리싱)");
+    			System.out.println("[03]환경(인테리어) 3D디자인");
+    			System.out.println("[04]AutoCAD 투상법");
+    			System.out.println("[05]사무행정 및 포토샵 활용");
+    			System.out.println("[06]국가공인 ITQ자격증(한글/엑셀/PPT) 취득");
+        	case 3: case 7: resetI = s.nextInt(); break;
+        	}
+        	
+        	if (setM == 1)
+        		stu.get(i).setName(resetS);
+        	else if (setM == 2)
+        		stu.get(i).setGender(resetS);
+        	else if (setM == 3)
+        		stu.get(i).setBirth(resetI);
+        	else if (setM == 4)
+        		stu.get(i).setPhnum(resetS);
+        	else if (setM == 5)
+        		stu.get(i).setType(resetS);
+        	else if (setM == 6)
+        		stu.get(i).setLecture(resetI);
+        	else if (setM == 7)
+        		stu.get(i).setScore(resetI);
+        	
+        	System.out.println("수정 완료");
+    	}
+    		
+    		
+    }
+    
+}
+
+//================================ Student에 추가
+	public void setName(String name){
+		this.name = name;
+	}
+	public void setGender(String gender){
+		this.gender = gender;
+	}
+	public void setPhnum(String phnum){
+		this.phnum = phnum;
+	}
+	public void setType(String type){
+		this.type = type;
+	}
+	public void setBirth(int birth) {
+		this.birth = birth;
+	}
+	public void setLecture(int lecture) {
+		this.lecture = lecture;
+	}
+	public void setScore(int score) {
+		this.score = score;
+	}
+		
+    
+    
+    
