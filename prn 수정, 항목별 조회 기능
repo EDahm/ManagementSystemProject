@@ -1,0 +1,113 @@
+// -----------------------------------------------------메뉴 프린팅
+	
+	public void prnMenu() {
+		System.out.println("항목을 선택해주세요");
+    	System.out.println("[1]이름");
+    	System.out.println("[2]성별(남성/여성)");
+    	System.out.println("[3]생일(991231)");
+    	System.out.println("[4]번호(010-1234-5678)");
+    	System.out.println("[5]수강 유형(일반/취성패)");
+		System.out.println("[6]수강강좌");
+    	System.out.println("[7]성적");
+	}
+// --------------------------------------------------수강목록 프린팅
+	public void prnLect() {
+		System.out.println("수강강좌(번호선택)");
+		System.out.println("[01]풀스택 개발자 양성과정");
+		System.out.println("[02]출판디자인(디지털퍼블리싱)");
+		System.out.println("[03]환경(인테리어) 3D디자인");
+		System.out.println("[04]AutoCAD 투상법");
+		System.out.println("[05]사무행정 및 포토샵 활용");
+		System.out.println("[06]국가공인 ITQ자격증(한글/엑셀/PPT) 취득");
+	}
+	
+	
+// ---------------------------------------------한명 출력
+	public void prnPer(int i) {
+		System.out.print("학생" + (i + 1) + " : " + stu.get(i).name + "/" + stu.get(i).gender + "/" + stu.get(i).birth
+				+ "/" + stu.get(i).phnum + "/" + stu.get(i).type + "/");
+
+		switch (stu.get(i).lecture) {
+		case 01:
+			System.out.println("풀스택 개발자 양성과정");
+			break;
+		case 02:
+			System.out.println("출판디자인(디지털퍼블리싱)");
+			break;
+		case 03:
+			System.out.println("출판디자인(디지털퍼블리싱)");
+			break;
+		case 04:
+			System.out.println("AutoCAD 투상법");
+			break;
+		case 05:
+			System.out.println("사무행정 및 포토샵 활용");
+			break;
+		case 06:
+			System.out.println("국가공인 ITQ자격증(한글/엑셀/PPT) 취득");
+			break;
+		}
+	}
+// ---------------------------------------------------- 전체 학생 출력
+	public void printStu() {
+		for (int i = 0; i < stu.size(); i++) 
+			prnPer(i);
+	}
+	
+// --------------------------------------------------항목별 조회
+	public void searchByInfo() {
+		Scanner s = new Scanner(System.in);
+		
+		System.out.println("항목별 조회");
+		prnMenu();
+		int infoSearch = s.nextInt();
+
+		System.out.println("항목 내 선택");
+		if (infoSearch == 6)  prnLect();
+		
+		String searchStr = s.next();
+		int searchInt = 0;
+		if (infoSearch == 3 || infoSearch == 6 || infoSearch == 7)
+			searchInt = Integer.parseInt(searchStr);
+		
+		switch(infoSearch) {
+		case 1: 		
+			for (int i = 0; i < stu.size(); i++) {
+				if (stu.get(i).name.equals(searchStr))
+					prnPer(i);
+			} break;
+		case 2:
+			for (int i = 0; i < stu.size(); i++) {
+				if (stu.get(i).gender.equals(searchStr))
+					prnPer(i);
+			} break;
+		case 3: 
+			for (int i = 0; i < stu.size(); i++) {
+				if (stu.get(i).birth == searchInt)
+					prnPer(i); 
+			} break;
+		case 4: 
+			for (int i = 0; i < stu.size(); i++) {
+				if (stu.get(i).phnum.equals(searchStr))
+					prnPer(i); 
+			} break;
+		case 5:
+			for (int i = 0; i < stu.size(); i++) {
+				if (stu.get(i).type.equals(searchStr))
+					prnPer(i); 
+			} break;
+		case 6: 
+			for (int i = 0; i < stu.size(); i++) {
+				if (stu.get(i).lecture == searchInt)
+					prnPer(i); 
+			} break;
+		case 7: 
+			for (int i = 0; i < stu.size(); i++) {
+				if (stu.get(i).score == searchInt)
+					prnPer(i); 
+			} break;
+		}
+		
+		
+
+	}
