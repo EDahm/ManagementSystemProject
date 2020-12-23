@@ -8,9 +8,9 @@ public class Class {
 	String time;
 	String classroom;
 	String date;
-	
+
 	public Class() {}
-	
+
 	public Class(String name, String professor, String time, String classroom, String date) {
 		this.name = name;
 		this.professor = professor;
@@ -18,10 +18,10 @@ public class Class {
 		this.classroom = classroom;
 		this.date = date;
 	}
-	
+
 	public void classList() {
 		ArrayList<Class> stuList = new ArrayList<Class>();
-		
+
 		stuList.add(new Class("풀스택 개발자 양성과정", "이춘희", "월 ~ 금 / 09:20 - 17:00", "302호", "2020-10-15 ~ 2021-03-11"));
 		stuList.add(new Class("출판디자인(디지털퍼블리싱)", "이철수", "월 ~ 금 / 09:30 - 13:00", "501호", "2020-11-09 ~ 2020-12-31"));
 		stuList.add(new Class("환경(인테리어) 3D디자인", "삼철수", "월 ~ 금 / 10:00 - 15:00", "502호", "2020-12-01 ~ 2021-02-11"));

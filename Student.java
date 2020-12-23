@@ -10,7 +10,7 @@ public class Student {
 	int lecture;
 	int score;
 
-	
+
 	public Student(String name, String gender, String birth, String phnum, String type, int lecture, int score) {
 		this.name = name;
 		this.gender = gender;
@@ -21,13 +21,13 @@ public class Student {
 		this.score = score;
 	}
 
-	
-	
-	
 
-	
-	
-	
 
-	
+
+
+
+
+
+
+
 }
