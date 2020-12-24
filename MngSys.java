@@ -6,26 +6,26 @@ public class MngSys {
 	Scanner s = new Scanner(System.in);
 
 ////////////////////////////////////////////////////////////////////////////////////
-//--------------------------------------------------------------------±âÁ¸ ¼ö°­»ı
+//--------------------------------------------------------------------ê¸°ì¡´ ìˆ˜ê°•ìƒ
 	ArrayList<Student> stu = new ArrayList<Student>();
 
 	public void currentStudent() {
-		stu.add(new Student("±è¸»ÀÌ", "¿©", "961014", "010-1111-1111", "Ãë¼ºÆĞ", 02, 80));
-		stu.add(new Student("¹è³ª¹«", "¿©", "980919", "010-2222-2222", "ÀÏ¹İ", 01, 90));
-		stu.add(new Student("³²µµ»ê", "³²", "920112", "010-3333-3333", "Ãë¼ºÆĞ", 01, 0));
-		stu.add(new Student("¼­´Ş¹Ì", "¿©", "921010", "010-4444-4444", "ÀÏ¹İ", 03, 75));
-		stu.add(new Student("ÇÑÁöÆò", "³²", "860405", "010-5555-5555", "ÀÏ¹İ", 04, 40));
-		stu.add(new Student("¿øÀÎÀç", "¿©", "890630", "010-6666-6666", "ÀÏ¹İ", 03, 97));
-		stu.add(new Student("ÀÌÃ¶»ê", "³²", "930228", "010-7777-7777", "ÀÏ¹İ", 02, 50));
-		stu.add(new Student("±è¿ë»ê", "³²", "940806", "010-8888-8888", "Ãë¼ºÆĞ", 02, 0));
-		stu.add(new Student("Á¤»çÇÏ", "¿©", "931225", "010-9999-9999", "Ãë¼ºÆĞ", 04, 0));
-		stu.add(new Student("Ãµ¼­Áø", "¿©", "970721", "010-1010-1010", "ÀÏ¹İ", 01, 85));
-		stu.add(new Student("ÁÖ´ÜÅÂ", "³²", "980106", "010-1111-1010", "Ãë¼ºÆĞ", 03, 0));
-		stu.add(new Student("ÀÌ±ÔÁø", "³²", "000514", "010-1212-1212", "Ãë¼ºÆĞ", 04, 0));
+		stu.add(new Student("ê¹€ë§ì´", "ì—¬", "961014", "010-1111-1111", "ì·¨ì„±íŒ¨", 02, 80));
+		stu.add(new Student("ë°°ë‚˜ë¬´", "ì—¬", "980919", "010-2222-2222", "ì¼ë°˜", 01, 90));
+		stu.add(new Student("ë‚¨ë„ì‚°", "ë‚¨", "920112", "010-3333-3333", "ì·¨ì„±íŒ¨", 01, 0));
+		stu.add(new Student("ì„œë‹¬ë¯¸", "ì—¬", "921010", "010-4444-4444", "ì¼ë°˜", 03, 75));
+		stu.add(new Student("í•œì§€í‰", "ë‚¨", "860405", "010-5555-5555", "ì¼ë°˜", 04, 40));
+		stu.add(new Student("ì›ì¸ì¬", "ì—¬", "890630", "010-6666-6666", "ì¼ë°˜", 03, 97));
+		stu.add(new Student("ì´ì² ì‚°", "ë‚¨", "930228", "010-7777-7777", "ì¼ë°˜", 02, 50));
+		stu.add(new Student("ê¹€ìš©ì‚°", "ë‚¨", "940806", "010-8888-8888", "ì·¨ì„±íŒ¨", 02, 0));
+		stu.add(new Student("ì •ì‚¬í•˜", "ì—¬", "931225", "010-9999-9999", "ì·¨ì„±íŒ¨", 04, 0));
+		stu.add(new Student("ì²œì„œì§„", "ì—¬", "970721", "010-1010-1010", "ì¼ë°˜", 01, 85));
+		stu.add(new Student("ì£¼ë‹¨íƒœ", "ë‚¨", "980106", "010-1111-1010", "ì·¨ì„±íŒ¨", 03, 0));
+		stu.add(new Student("ì´ê·œì§„", "ë‚¨", "000514", "010-1212-1212", "ì·¨ì„±íŒ¨", 04, 0));
 	}
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-//-------------------------------------------------------------------------1-1-1ÀüÃ¼¼ö°­»ıÁ¶È¸
+//-------------------------------------------------------------------------1-1-1ì „ì²´ìˆ˜ê°•ìƒì¡°íšŒ
 	public void printStu() {
 
 		System.out.println("---------------------------------------------------------");
@@ -36,16 +36,16 @@ public class MngSys {
 
 			switch (stu.get(i).lecture) {
 			case 01:
-				System.out.println("Ç®½ºÅÃ °³¹ßÀÚ ¾ç¼º°úÁ¤");
+				System.out.println("í’€ìŠ¤íƒ ê°œë°œì ì–‘ì„±ê³¼ì •");
 				break;
 			case 02:
-				System.out.println("ÃâÆÇµğÀÚÀÎ(µğÁöÅĞÆÛºí¸®½Ì)");
+				System.out.println("ì¶œíŒë””ìì¸(ë””ì§€í„¸í¼ë¸”ë¦¬ì‹±)");
 				break;
 			case 03:
-				System.out.println("ÃâÆÇµğÀÚÀÎ(µğÁöÅĞÆÛºí¸®½Ì)");
+				System.out.println("ì¶œíŒë””ìì¸(ë””ì§€í„¸í¼ë¸”ë¦¬ì‹±)");
 				break;
 			case 04:
-				System.out.println("AutoCAD Åõ»ó¹ı");
+				System.out.println("AutoCAD íˆ¬ìƒë²•");
 				break;
 			}
 		}
@@ -57,10 +57,10 @@ public class MngSys {
 
 
 ////////////////////////////////////////////////////////////////////////////////////////
-//---------------------------------------------------------------------------1-1-2°³ÀÎ Á¶È¸
+//---------------------------------------------------------------------------1-1-2ê°œì¸ ì¡°íšŒ
 	public void searchPer() {
 		int count = 0;
-		System.out.println("Á¶È¸ÇÒ ÇĞ»ıÀÇ ÀÌ¸§À» ÀÔ·ÂÇØ ÁÖ¼¼¿ä.");
+		System.out.println("ì¡°íšŒí•  í•™ìƒì˜ ì´ë¦„ì„ ì…ë ¥í•´ ì£¼ì„¸ìš”.");
 		System.out.print(">> ");
 		String searchStr = s.next();
 		System.out.println("---------------------------------------------------------");
@@ -70,7 +70,7 @@ public class MngSys {
 				count++;
 			}
 
-		} if (count == 0) System.out.println("[system]ÇØ´çÇÏ´Â ÇĞ»ıÀº ¾ø½À´Ï´Ù.");
+		} if (count == 0) System.out.println("[system]í•´ë‹¹í•˜ëŠ” í•™ìƒì€ ì—†ìŠµë‹ˆë‹¤.");
 		System.out.println("---------------------------------------------------------");
 
 		prnMenu();
@@ -88,23 +88,23 @@ public class MngSys {
 
 
 /////////////////////////////////////////////////////////////////////////////////////////
-//--------------------------------------------------------------------------1-1-2 °³ÀÎÁ¶È¸
+//--------------------------------------------------------------------------1-1-2 ê°œì¸ì¡°íšŒ
 	public void prnPer(int i) {
 		System.out.print(stu.get(i).name + "/" + stu.get(i).gender + "/" + stu.get(i).birth + "/" + stu.get(i).phnum
 				+ "/" + stu.get(i).type + "/");
 
 		switch (stu.get(i).lecture) {
 		case 01:
-			System.out.println("Ç®½ºÅÃ °³¹ßÀÚ ¾ç¼º°úÁ¤");
+			System.out.println("í’€ìŠ¤íƒ ê°œë°œì ì–‘ì„±ê³¼ì •");
 			break;
 		case 02:
-			System.out.println("ÃâÆÇµğÀÚÀÎ(µğÁöÅĞÆÛºí¸®½Ì)");
+			System.out.println("ì¶œíŒë””ìì¸(ë””ì§€í„¸í¼ë¸”ë¦¬ì‹±)");
 			break;
 		case 03:
-			System.out.println("ÃâÆÇµğÀÚÀÎ(µğÁöÅĞÆÛºí¸®½Ì)");
+			System.out.println("ì¶œíŒë””ìì¸(ë””ì§€í„¸í¼ë¸”ë¦¬ì‹±)");
 			break;
 		case 04:
-			System.out.println("AutoCAD Åõ»ó¹ı");
+			System.out.println("AutoCAD íˆ¬ìƒë²•");
 			break;
 		}
 
@@ -115,10 +115,10 @@ public class MngSys {
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-//------------------------------------------------------------------------1-1-3 ¼ö°­À¯Çüº°
+//------------------------------------------------------------------------1-1-3 ìˆ˜ê°•ìœ í˜•ë³„
 	public void printType() {
 		int count = 0;
-		System.out.println("Á¶È¸ÇÒ ¼ö°­ À¯ÇüÀ» ÀÔ·ÂÇØ ÁÖ¼¼¿ä.(ÀÏ¹İ/Ãë¼ºÆĞ)");
+		System.out.println("ì¡°íšŒí•  ìˆ˜ê°• ìœ í˜•ì„ ì…ë ¥í•´ ì£¼ì„¸ìš”.(ì¼ë°˜/ì·¨ì„±íŒ¨)");
 		System.out.print(">> ");
 		String searchStr = s.next();
 
@@ -130,7 +130,7 @@ public class MngSys {
 			}
 		}
 		if (count == 0)
-			System.out.println("[system]" + searchStr + " À¯ÇüÀº Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+			System.out.println("[system]" + searchStr + " ìœ í˜•ì€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 
 		System.out.println("---------------------------------------------------------");
 
@@ -152,10 +152,10 @@ public class MngSys {
 
 
 ////////////////////////////////////////////////////////////////////////////////////////
-//-----------------------------------------------------1-1-4 °­ÁÂº°
+//-----------------------------------------------------1-1-4 ê°•ì¢Œë³„
 		public void printLec() {
 			int count = 0;
-			System.out.println("Á¶È¸ÇÒ °­ÁÂÄÚµå¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä.");
+			System.out.println("ì¡°íšŒí•  ê°•ì¢Œì½”ë“œë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš”.");
 			System.out.println("----------------------------");
 			lectureMenu();
 			System.out.println("----------------------------");
@@ -171,7 +171,7 @@ public class MngSys {
 				}
 			}
 			if (count == 0)
-				System.out.println("[system]ÇØ´ç °­ÁÂ¸¦ ¼ö°­ÇÏ´Â ÇĞ»ıÀº ¾ø½À´Ï´Ù.");
+				System.out.println("[system]í•´ë‹¹ ê°•ì¢Œë¥¼ ìˆ˜ê°•í•˜ëŠ” í•™ìƒì€ ì—†ìŠµë‹ˆë‹¤.");
 
 			System.out.println("---------------------------------------------------------");
 
@@ -182,7 +182,7 @@ public class MngSys {
 
 
 ////////////////////////////////////////////////////////////////////////////////////////
-//-----------------------------------------------------1-1-4 °­ÁÂº°
+//-----------------------------------------------------1-1-4 ê°•ì¢Œë³„
 
 		public void printLec02(int num) {
 			int count = 0;
@@ -197,7 +197,7 @@ public class MngSys {
 				}
 			}
 			if (count == 0)
-				System.out.println("[system]ÇØ´ç °­ÁÂ¸¦ ¼ö°­ÇÏ´Â ÇĞ»ıÀº ¾ø½À´Ï´Ù.");
+				System.out.println("[system]í•´ë‹¹ ê°•ì¢Œë¥¼ ìˆ˜ê°•í•˜ëŠ” í•™ìƒì€ ì—†ìŠµë‹ˆë‹¤.");
 
 			System.out.println("---------------------------------------------------------");
 
@@ -207,7 +207,7 @@ public class MngSys {
 
 
 ///////////////////////////////////////////////////////////////////////////////////////
-//--------------------------------------------------°­ÁÂº° Á¶È¸ ¸¶¹«¸® 1
+//--------------------------------------------------ê°•ì¢Œë³„ ì¡°íšŒ ë§ˆë¬´ë¦¬ 1
 		public void endLec() {
 			prnMenu();
 			System.out.print(">> ");
@@ -225,12 +225,12 @@ public class MngSys {
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
-//------------------------------------------------------------------------1-1 ¼ö°­»ıÁ¶È¸ ¸¶¹«¸®
+//------------------------------------------------------------------------1-1 ìˆ˜ê°•ìƒì¡°íšŒ ë§ˆë¬´ë¦¬
 		public void prnMenu() {
 			System.out.println("---------------");
-			System.out.println("[1] Ãß°¡Á¶È¸");
-			System.out.println("[2] »óÀ§¸Ş´º");
-			System.out.println("[0] Á¾·á");
+			System.out.println("[1] ì¶”ê°€ì¡°íšŒ");
+			System.out.println("[2] ìƒìœ„ë©”ë‰´");
+			System.out.println("[0] ì¢…ë£Œ");
 			System.out.println("---------------");
 
 		}
@@ -238,18 +238,18 @@ public class MngSys {
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
-//----------------------------------------------------------------------------1-1 ¼ö°­»ıÁ¶È¸ ¸¶¹«¸®
+//----------------------------------------------------------------------------1-1 ìˆ˜ê°•ìƒì¡°íšŒ ë§ˆë¬´ë¦¬
 		public void upper02(int num) {
 			switch (num) {
 			case 2:
 				subsubMenu();
 				break;
 			case 0:
-				System.out.println("[system]ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+				System.out.println("[system]í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 				System.exit(0);
 				break;
 			default:
-				System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+				System.out.println("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
 				System.out.print(">> ");
 				num = s.nextInt();
 			}
@@ -257,65 +257,65 @@ public class MngSys {
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-//-------------------------------------------------------------------------1»óÀ§¸Ş´º 
+//-------------------------------------------------------------------------1ìƒìœ„ë©”ë‰´ 
 	public void upper01(int num) {
 		switch (num) {
 		case 2:
 			subMenu01();
 			break;
 		case 0:
-			System.out.println("[system]ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+			System.out.println("[system]í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 			System.exit(0);
 			break;
 		default:
-			System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+			System.out.println("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
 			System.out.print(">> ");
 			num = s.nextInt();
 		}
 	}
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-//----------------------------------------------------------------------1-2¼ö°­»ı Ãß°¡
+//----------------------------------------------------------------------1-2ìˆ˜ê°•ìƒ ì¶”ê°€
 	public void addStudent() {
 
-		System.out.println("¼ö°­»ı °ü¸® - ¼ö°­»ı Ãß°¡");
+		System.out.println("ìˆ˜ê°•ìƒ ê´€ë¦¬ - ìˆ˜ê°•ìƒ ì¶”ê°€");
 
 		System.out.println("-------------------------------------");
 
-		System.out.print("ÀÌ¸§ : ");
+		System.out.print("ì´ë¦„ : ");
 		String name = s.next();
 
-		System.out.print("¼ºº°(³²/¿©) : ");
+		System.out.print("ì„±ë³„(ë‚¨/ì—¬) : ");
 		String gender = s.next();
 
-		System.out.print("»ı³â¿ùÀÏ(ex:021212) : ");
+		System.out.print("ìƒë…„ì›”ì¼(ex:021212) : ");
 		String birth = s.next();
 
-		System.out.print("¿¬¶ôÃ³(010-0000-0000) : ");
+		System.out.print("ì—°ë½ì²˜(010-0000-0000) : ");
 		String phnum = s.next();
 
-		System.out.print("¼ö°­À¯Çü(ÀÏ¹İ/Ãë¼ºÆĞ) : ");
+		System.out.print("ìˆ˜ê°•ìœ í˜•(ì¼ë°˜/ì·¨ì„±íŒ¨) : ");
 		String type = s.next();
 
-		System.out.println("¼ö°­°­ÁÂ(¹øÈ£¼±ÅÃ) : ");
+		System.out.println("ìˆ˜ê°•ê°•ì¢Œ(ë²ˆí˜¸ì„ íƒ) : ");
 		lectureMenu();
 		System.out.print(">> ");
 		int lecture = s.nextInt();
 
-		System.out.print("¼ºÀû(¹ÌÀÔ·Â Ã³¸® '0'ÀÔ·Â) : ");
+		System.out.print("ì„±ì (ë¯¸ì…ë ¥ ì²˜ë¦¬ '0'ì…ë ¥) : ");
 		int score = s.nextInt();
 
 		System.out.println("-------------------------------------");
 
 		stu.add(new Student(name, gender, birth, phnum, type, lecture, score));
 
-		System.out.println("[system]¼ö°­»ı µî·ÏÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+		System.out.println("[system]ìˆ˜ê°•ìƒ ë“±ë¡ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 		printStu();
 
 		System.out.println("---------------");
-		System.out.println("[1] Ãß°¡µî·Ï");
-		System.out.println("[2] »óÀ§¸Ş´º");
-		System.out.println("[0] Á¾·á");
+		System.out.println("[1] ì¶”ê°€ë“±ë¡");
+		System.out.println("[2] ìƒìœ„ë©”ë‰´");
+		System.out.println("[0] ì¢…ë£Œ");
 		System.out.println("---------------");
 
 		System.out.print(">> ");
@@ -335,33 +335,33 @@ public class MngSys {
 
 
 //////////////////////////////////////////////////////////////////////////////////////
-//----------------------------------------------------------------1-3 ¼ö°­»ı ¼öÁ¤
+//----------------------------------------------------------------1-3 ìˆ˜ê°•ìƒ ìˆ˜ì •
 	public void resetStu() {
-		System.out.println("¼ö°­»ı °ü¸® - ¼ö°­»ı ¼öÁ¤");
+		System.out.println("ìˆ˜ê°•ìƒ ê´€ë¦¬ - ìˆ˜ê°•ìƒ ìˆ˜ì •");
 		System.out.println("---------------------------");
-		System.out.print("¼öÁ¤ÇÒ ¼ö°­»ıÀÇ ÀÌ¸§ : ");
+		System.out.print("ìˆ˜ì •í•  ìˆ˜ê°•ìƒì˜ ì´ë¦„ : ");
 		String setStu = s.next();
 		int count = 0;
 		for (int i = 0; i < stu.size(); i++) {
 			if (stu.get(i).name.equals(setStu)) {
-				System.out.println("¼öÁ¤ÇÒ Ç×¸ñÀ» ¼±ÅÃÇØÁÖ¼¼¿ä.");
+				System.out.println("ìˆ˜ì •í•  í•­ëª©ì„ ì„ íƒí•´ì£¼ì„¸ìš”.");
 				System.out.println("---------------------------");
-				System.out.println("[1]ÀÌ¸§");
-				System.out.println("[2]¼ºº°(³²¼º/¿©¼º)");
-				System.out.println("[3]»ıÀÏ(991231)");
-				System.out.println("[4]¹øÈ£(010-1234-5678)");
-				System.out.println("[5]¼ö°­ À¯Çü(ÀÏ¹İ/Ãë¼ºÆĞ)");
-				System.out.println("[6]¼ö°­°­ÁÂ");
+				System.out.println("[1]ì´ë¦„");
+				System.out.println("[2]ì„±ë³„(ë‚¨ì„±/ì—¬ì„±)");
+				System.out.println("[3]ìƒì¼(991231)");
+				System.out.println("[4]ë²ˆí˜¸(010-1234-5678)");
+				System.out.println("[5]ìˆ˜ê°• ìœ í˜•(ì¼ë°˜/ì·¨ì„±íŒ¨)");
+				System.out.println("[6]ìˆ˜ê°•ê°•ì¢Œ");
 				System.out.println("---------------------------");
 				System.out.print(">> ");
 				int setM = s.nextInt();
 
 				if (setM < 1 || setM > 6) {
-					System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+					System.out.println("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
 					continue;
 				}
 
-				System.out.println("¼öÁ¤ÇÒ °ªÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				System.out.println("ìˆ˜ì •í•  ê°’ì„ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 				System.out.print(">> ");
 
 				switch (setM) {
@@ -382,12 +382,12 @@ public class MngSys {
 					break;
 				case 6:
 					lectureMenu();
-					System.out.print("°­ÀÇ¹øÈ£ ¼±ÅÃ>> ");
+					System.out.print("ê°•ì˜ë²ˆí˜¸ ì„ íƒ>> ");
 					stu.get(i).lecture = s.nextInt();
 					break;
 				}
 
-				System.out.println("[system]¼öÁ¤ÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+				System.out.println("[system]ìˆ˜ì •ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 				count++;
 				printStu();
 				break;
@@ -395,12 +395,12 @@ public class MngSys {
 			
 		}
 		if (count == 0)
-			System.out.println(setStu + "´Â(Àº) ¼ö°­»ıÀÌ ¾Æ´Õ´Ï´Ù.");
+			System.out.println(setStu + "ëŠ”(ì€) ìˆ˜ê°•ìƒì´ ì•„ë‹™ë‹ˆë‹¤.");
 
 		System.out.println("---------------");
-		System.out.println("[1] Ãß°¡¼öÁ¤");
-		System.out.println("[2] »óÀ§¸Ş´º");
-		System.out.println("[0] Á¾·á");
+		System.out.println("[1] ì¶”ê°€ìˆ˜ì •");
+		System.out.println("[2] ìƒìœ„ë©”ë‰´");
+		System.out.println("[0] ì¢…ë£Œ");
 		System.out.println("---------------");
 
 		System.out.print(">> ");
@@ -413,11 +413,11 @@ public class MngSys {
 	}
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-//-------------------------------------------------------------------------1-4 ¼ö°­»ı»èÁ¦
+//-------------------------------------------------------------------------1-4 ìˆ˜ê°•ìƒì‚­ì œ
 	public void removeStu() {
-		System.out.println("¼ö°­»ı °ü¸® - ¼ö°­»ı »èÁ¦");
+		System.out.println("ìˆ˜ê°•ìƒ ê´€ë¦¬ - ìˆ˜ê°•ìƒ ì‚­ì œ");
 		printStu();
-		System.out.print("»èÁ¦ÇÒ ¼ö°­»ıÀÇ ÀÌ¸§À» ÀÔ·ÂÇØÁÖ¼¼¿ä>> ");
+		System.out.print("ì‚­ì œí•  ìˆ˜ê°•ìƒì˜ ì´ë¦„ì„ ì…ë ¥í•´ì£¼ì„¸ìš”>> ");
 		String remStu = s.next();
 		int count = 0;
 		
@@ -428,16 +428,16 @@ public class MngSys {
 			}		
 		}
 		if (count == 0 )
-			System.out.println(remStu + "(¿Í)°ú ÀÏÄ¡ÇÏ´Â ÇĞ»ıÀÌ ¾ø½À´Ï´Ù.");
+			System.out.println(remStu + "(ì™€)ê³¼ ì¼ì¹˜í•˜ëŠ” í•™ìƒì´ ì—†ìŠµë‹ˆë‹¤.");
 		else
-			System.out.println("\n[system]»èÁ¦°¡ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+			System.out.println("\n[system]ì‚­ì œê°€ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 		
 		printStu();
 
 		System.out.println("---------------");
-		System.out.println("[1] Ãß°¡»èÁ¦");
-		System.out.println("[2] »óÀ§¸Ş´º");
-		System.out.println("[0] Á¾·á");
+		System.out.println("[1] ì¶”ê°€ì‚­ì œ");
+		System.out.println("[2] ìƒìœ„ë©”ë‰´");
+		System.out.println("[0] ì¢…ë£Œ");
 		System.out.println("---------------");
 
 		System.out.print(">> ");
@@ -450,16 +450,16 @@ public class MngSys {
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-//---------------------------------------------------------------------------1-5-1 ¼ºÀûÀÔ·Â
+//---------------------------------------------------------------------------1-5-1 ì„±ì ì…ë ¥
 	public void insertScore() {
-		System.out.println("¼ö°­»ı °ü¸® - ¼ºÀû°ü¸® - ¼ºÀû ÀÔ·Â");
+		System.out.println("ìˆ˜ê°•ìƒ ê´€ë¦¬ - ì„±ì ê´€ë¦¬ - ì„±ì  ì…ë ¥");
 		System.out.println("---------------------------");
-		System.out.print("¼ºÀûÀ» ÀÔ·ÂÇÒ ¼ö°­»ıÀÇ ÀÌ¸§ : ");
+		System.out.print("ì„±ì ì„ ì…ë ¥í•  ìˆ˜ê°•ìƒì˜ ì´ë¦„ : ");
 		String setStu = s.next();
 
 		for (int i = 0; i < stu.size(); i++) {
 			if (stu.get(i).name.equals(setStu)) {
-				System.out.println(setStu + "ÀÇ ¼ºÀûÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				System.out.println(setStu + "ì˜ ì„±ì ì„ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 				System.out.print(">> ");
 
 				stu.get(i).score = s.nextInt();
@@ -467,12 +467,12 @@ public class MngSys {
 			}
 
 		}
-		System.out.println("[system]¼ºÀû ÀÔ·ÂÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+		System.out.println("[system]ì„±ì  ì…ë ¥ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 
 		System.out.println("---------------");
-		System.out.println("[1] Ãß°¡ÀÔ·Â");
-		System.out.println("[2] »óÀ§¸Ş´º");
-		System.out.println("[0] Á¾·á");
+		System.out.println("[1] ì¶”ê°€ì…ë ¥");
+		System.out.println("[2] ìƒìœ„ë©”ë‰´");
+		System.out.println("[0] ì¢…ë£Œ");
 		System.out.println("---------------");
 
 		System.out.print(">> ");
@@ -486,13 +486,13 @@ public class MngSys {
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-//---------------------------------------------------------------------------1-5-1 ¼ºÀûÀÔ·Â
+//---------------------------------------------------------------------------1-5-1 ì„±ì ì…ë ¥
 	public void insertScore02(String name) {
 		String setStu = name;
 
 		for (int i = 0; i < stu.size(); i++) {
 			if (stu.get(i).name.equals(setStu)) {
-				System.out.println(setStu + "ÀÇ ¼ºÀûÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				System.out.println(setStu + "ì˜ ì„±ì ì„ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 				System.out.print(">> ");
 
 				stu.get(i).score = s.nextInt();
@@ -500,7 +500,7 @@ public class MngSys {
 			}
 
 		}
-		System.out.println("[system]¼ºÀû ÀÔ·ÂÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+		System.out.println("[system]ì„±ì  ì…ë ¥ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 
 	}
 
@@ -509,11 +509,11 @@ public class MngSys {
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-//---------------------------------------------------------------------------1-5-2 ¼ºÀûÁ¶È¸
+//---------------------------------------------------------------------------1-5-2 ì„±ì ì¡°íšŒ
 	public void searchScore() {
 		char pass;
 
-		System.out.println("¼ºÀûÀ» Á¶È¸ÇÒ ¼ö°­»ıÀÇ ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ì„±ì ì„ ì¡°íšŒí•  ìˆ˜ê°•ìƒì˜ ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”.");
 		System.out.print(">> ");
 		String name = s.next();
 
@@ -526,8 +526,8 @@ public class MngSys {
 
 			if (name.equals(stu.get(i).name)) {
 				if (stu.get(i).score == 0) {
-					System.out.println(name + " ¼ö°­»ıÀÇ ¼ºÀûÀº ÇöÀç '¹ÌÀÔ·Â'»óÅÂÀÔ´Ï´Ù.");
-					System.out.print("¼ºÀûÀ» ÀÔ·ÂÇÏ½Ã°Ú½À´Ï±î?(Y/N) ");
+					System.out.println(name + " ìˆ˜ê°•ìƒì˜ ì„±ì ì€ í˜„ì¬ 'ë¯¸ì…ë ¥'ìƒíƒœì…ë‹ˆë‹¤.");
+					System.out.print("ì„±ì ì„ ì…ë ¥í•˜ì‹œê² ìŠµë‹ˆê¹Œ?(Y/N) ");
 					char ans = s.next().charAt(0);
 
 					if(ans == 'y' || ans == 'Y') {
@@ -538,31 +538,31 @@ public class MngSys {
 					}
 					else if(ans == 'n' || ans == 'N') return;
 					else
-						System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+						System.out.println("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
 						return;
 
 					}
 					else {
 					System.out.println("------------------------------------");
-					System.out.println("ÀÌ¸§ : " + stu.get(i).name);
+					System.out.println("ì´ë¦„ : " + stu.get(i).name);
 
 					switch (stu.get(i).lecture) {
 					case 01:
-						System.out.println("¼ö°­ÁßÀÎ °­ÁÂ : Ç®½ºÅÃ °³¹ßÀÚ ¾ç¼º°úÁ¤");
+						System.out.println("ìˆ˜ê°•ì¤‘ì¸ ê°•ì¢Œ : í’€ìŠ¤íƒ ê°œë°œì ì–‘ì„±ê³¼ì •");
 						break;
 					case 02:
-						System.out.println("¼ö°­ÁßÀÎ °­ÁÂ : ÃâÆÇµğÀÚÀÎ(µğÁöÅĞÆÛºí¸®½Ì)");
+						System.out.println("ìˆ˜ê°•ì¤‘ì¸ ê°•ì¢Œ : ì¶œíŒë””ìì¸(ë””ì§€í„¸í¼ë¸”ë¦¬ì‹±)");
 						break;
 					case 03:
-						System.out.println("¼ö°­ÁßÀÎ °­ÁÂ : ÃâÆÇµğÀÚÀÎ(µğÁöÅĞÆÛºí¸®½Ì)");
+						System.out.println("ìˆ˜ê°•ì¤‘ì¸ ê°•ì¢Œ : ì¶œíŒë””ìì¸(ë””ì§€í„¸í¼ë¸”ë¦¬ì‹±)");
 						break;
 					case 04:
-						System.out.println("¼ö°­ÁßÀÎ °­ÁÂ : AutoCAD Åõ»ó¹ı");
+						System.out.println("ìˆ˜ê°•ì¤‘ì¸ ê°•ì¢Œ : AutoCAD íˆ¬ìƒë²•");
 						break;
 					}
 
-					System.out.println("Á¡¼ö : " + stu.get(i).score);
-					System.out.println("¼ö·á°¡´É¿©ºÎ : " + pass);
+					System.out.println("ì ìˆ˜ : " + stu.get(i).score);
+					System.out.println("ìˆ˜ë£Œê°€ëŠ¥ì—¬ë¶€ : " + pass);
 					System.out.println("------------------------------------");
 					return;
 				}
@@ -574,12 +574,12 @@ public class MngSys {
 
 
 //////////////////////////////////////////////////////////////////////////////////////////
-//-------------------------------------------------------------------------------¼ºÀûÁ¶È¸ ¸¶¹«¸®
+//-------------------------------------------------------------------------------ì„±ì ì¡°íšŒ ë§ˆë¬´ë¦¬
 	public void researchMenu() {
 		System.out.println("---------------");
-		System.out.println("[1] Ãß°¡Á¶È¸");
-		System.out.println("[2] »óÀ§¸Ş´º");
-		System.out.println("[0] Á¾·á");
+		System.out.println("[1] ì¶”ê°€ì¡°íšŒ");
+		System.out.println("[2] ìƒìœ„ë©”ë‰´");
+		System.out.println("[0] ì¢…ë£Œ");
 		System.out.println("---------------");
 
 		System.out.print(">> ");
@@ -592,33 +592,33 @@ public class MngSys {
 	}
 
 ////////////////////////////////////////////////////////////////////////////////////
-//------------------------------------------------------------------°­ÀÇ ¸ñ·Ï(°­ÀÇ Ãß°¡½Ã ¿©±â·Î)
+//------------------------------------------------------------------ê°•ì˜ ëª©ë¡(ê°•ì˜ ì¶”ê°€ì‹œ ì—¬ê¸°ë¡œ)
 
 	ArrayList<Class> lecture = new ArrayList<Class>();
 
 	public void classList() {
-		lecture.add(new Class("Ç®½ºÅÃ °³¹ßÀÚ ¾ç¼º°úÁ¤", "ÀÌÃáÈñ, ¹Ú¹Ì", "¿ù-±İ / 09:20 - 18:00", "302È£", "2020-10-15 ~ 2021-03-11"));
-		lecture.add(new Class("ÃâÆÇµğÀÚÀÎ(µğÁöÅĞÆÛºí¸®½Ì)", "±èÃ¶¼ö", "¿ù-±İ / 10:00 - 14:00", "501È£", "2020-12-01 ~ 2021-01-31"));
-		lecture.add(new Class("È¯°æ(ÀÎÅ×¸®¾î) 3DµğÀÚÀÎ", "¹ÚÃ¶¼ö", "¿ù,¼ö,±İ / 13:10 - 17:00", "303È£", "2020-11-04 ~ 2021-12-24"));
-		lecture.add(new Class("AutoCAD Åõ»ó¹ı", "ÀåÃ¶¼ö", "È­,¸ñ,Åä / 11:10 - 16:00", "502È£", "2020-10-14 ~ 2021-11-30"));
+		lecture.add(new Class("í’€ìŠ¤íƒ ê°œë°œì ì–‘ì„±ê³¼ì •", "ì´ì¶˜í¬, ë°•ë¯¸", "ì›”-ê¸ˆ / 09:20 - 18:00", "302í˜¸", "2020-10-15 ~ 2021-03-11"));
+		lecture.add(new Class("ì¶œíŒë””ìì¸(ë””ì§€í„¸í¼ë¸”ë¦¬ì‹±)", "ê¹€ì² ìˆ˜", "ì›”-ê¸ˆ / 10:00 - 14:00", "501í˜¸", "2020-12-01 ~ 2021-01-31"));
+		lecture.add(new Class("í™˜ê²½(ì¸í…Œë¦¬ì–´) 3Dë””ìì¸", "ë°•ì² ìˆ˜", "ì›”,ìˆ˜,ê¸ˆ / 13:10 - 17:00", "303í˜¸", "2020-11-04 ~ 2021-12-24"));
+		lecture.add(new Class("AutoCAD íˆ¬ìƒë²•", "ì¥ì² ìˆ˜", "í™”,ëª©,í†  / 11:10 - 16:00", "502í˜¸", "2020-10-14 ~ 2021-11-30"));
 	}
 
 ///////////////////////////////////////////////////////////////////////////////////////////
-//----------------------------------------------------------------2-n °­ÀÇ ¼¼ºÎ»çÇ× Ãâ·Â
+//----------------------------------------------------------------2-n ê°•ì˜ ì„¸ë¶€ì‚¬í•­ ì¶œë ¥
 	public void printClass(int num) {
-		System.out.println("°³¼³°­ÁÂ Á¶È¸ - »ó¼¼Á¶È¸");
+		System.out.println("ê°œì„¤ê°•ì¢Œ ì¡°íšŒ - ìƒì„¸ì¡°íšŒ");
 		System.out.println("-------------------------------------");
-		System.out.println("°­ÀÇ¸í : " + lecture.get(num - 1).name);
-		System.out.println("´ã´ç°­»ç : " + lecture.get(num - 1).professor);
-		System.out.println("½Ã°£Ç¥ : " + lecture.get(num - 1).time);
-		System.out.println("°­ÀÇ½Ç : " + lecture.get(num - 1).classroom);
-		System.out.println("±â°£ : " + lecture.get(num - 1).date);
+		System.out.println("ê°•ì˜ëª… : " + lecture.get(num - 1).name);
+		System.out.println("ë‹´ë‹¹ê°•ì‚¬ : " + lecture.get(num - 1).professor);
+		System.out.println("ì‹œê°„í‘œ : " + lecture.get(num - 1).time);
+		System.out.println("ê°•ì˜ì‹¤ : " + lecture.get(num - 1).classroom);
+		System.out.println("ê¸°ê°„ : " + lecture.get(num - 1).date);
 		System.out.println("-------------------------------------");
 
-		System.out.println("[1] ¼ö°­»ı ¸í´Ü Á¶È¸");
-		System.out.println("[2] ´Ù¸¥ °­ÁÂ Á¶È¸");
-		System.out.println("[3] »óÀ§¸Ş´º");
-		System.out.println("[0] Á¾·á");
+		System.out.println("[1] ìˆ˜ê°•ìƒ ëª…ë‹¨ ì¡°íšŒ");
+		System.out.println("[2] ë‹¤ë¥¸ ê°•ì¢Œ ì¡°íšŒ");
+		System.out.println("[3] ìƒìœ„ë©”ë‰´");
+		System.out.println("[0] ì¢…ë£Œ");
 		System.out.println("-------------------------------------");
 		System.out.print(">> ");
 		int pcNum = s.nextInt();
@@ -635,32 +635,32 @@ public class MngSys {
 			start();
 			break;
 		case 0:
-			System.out.println("[system]ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+			System.out.println("[system]í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 			System.exit(0);
 			break;
 		}
 
 	}
 
-//--------------------------------------------------------------------------¸Ş´º¸Ş´º
+//--------------------------------------------------------------------------ë©”ë‰´ë©”ë‰´
 
 ////////////////////////////////////////////////////////////////////////////////////
-//--------------------------------------------------------------------»óÀ§¸Ş´º, Á¾·á
+//--------------------------------------------------------------------ìƒìœ„ë©”ë‰´, ì¢…ë£Œ
 	public void upperORexit() {
 		System.out.println("---------------");
-		System.out.println("[1] »óÀ§¸Ş´º");
-		System.out.println("[0] Á¾·á");
+		System.out.println("[1] ìƒìœ„ë©”ë‰´");
+		System.out.println("[0] ì¢…ë£Œ");
 		System.out.println("---------------");
 
 	}
 
 ////////////////////////////////////////////////////////////////////////////////////
-//--------------------------------------------------------------------Ãß°¡Á¶È¸
+//--------------------------------------------------------------------ì¶”ê°€ì¡°íšŒ
 	public void research() {
 		System.out.println("---------------");
-		System.out.println("[1] Ãß°¡Á¶È¸");
-		System.out.println("[2] »óÀ§¸Ş´º");
-		System.out.println("[0] Á¾·á");
+		System.out.println("[1] ì¶”ê°€ì¡°íšŒ");
+		System.out.println("[2] ìƒìœ„ë©”ë‰´");
+		System.out.println("[0] ì¢…ë£Œ");
 		System.out.println("---------------");
 
 	}
@@ -668,24 +668,24 @@ public class MngSys {
 
 
 ////////////////////////////////////////////////////////////////////////////////////
-//--------------------------------------------------------------------Ãß°¡ Á¶È¸ °³ÀÎ
+//--------------------------------------------------------------------ì¶”ê°€ ì¡°íšŒ ê°œì¸
 	public void prnSearch() {
 		System.out.print(">> ");
 		int num = s.nextInt();
 
 		switch (num) {
 		case 1:
-			//°³ÀÎÁ¶È¸ ¸Ş¼Òµå
+			//ê°œì¸ì¡°íšŒ ë©”ì†Œë“œ
 			break;
 		case 2:
 			subsubMenu();
 			break;
 		case 0:
-			System.out.println("[system]ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+			System.out.println("[system]í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 			System.exit(0);
 			break;
 		default:
-			System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+			System.out.println("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
 			System.out.print(">> ");
 			num = s.nextInt();
 		}
@@ -693,24 +693,24 @@ public class MngSys {
 
 
 ////////////////////////////////////////////////////////////////////////////////////
-//--------------------------------------------------------------------Ãß°¡ Á¶È¸ ¼ö°­À¯Çüº°
+//--------------------------------------------------------------------ì¶”ê°€ ì¡°íšŒ ìˆ˜ê°•ìœ í˜•ë³„
 	public void typeSearch() {
 		System.out.print(">> ");
 		int num = s.nextInt();
 
 		switch (num) {
 		case 1:
-			//¼ö°­À¯Çüº° ¸Ş¼Òµå
+			//ìˆ˜ê°•ìœ í˜•ë³„ ë©”ì†Œë“œ
 			break;
 		case 2:
 			subsubMenu();
 			break;
 		case 0:
-			System.out.println("[system]ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+			System.out.println("[system]í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 			System.exit(0);
 			break;
 		default:
-			System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+			System.out.println("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
 			System.out.print(">> ");
 			num = s.nextInt();
 		}
@@ -719,24 +719,24 @@ public class MngSys {
 
 
 ////////////////////////////////////////////////////////////////////////////////////
-//--------------------------------------------------------------------Ãß°¡ Á¶È¸ °­ÁÂº°
+//--------------------------------------------------------------------ì¶”ê°€ ì¡°íšŒ ê°•ì¢Œë³„
 	public void lecSearch() {
 		System.out.print(">> ");
 		int num = s.nextInt();
 
 		switch (num) {
 		case 1:
-			//°­ÁÂº° ¸Ş¼Òµå
+			//ê°•ì¢Œë³„ ë©”ì†Œë“œ
 			break;
 		case 2:
 			subsubMenu();
 			break;
 		case 0:
-			System.out.println("[system]ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+			System.out.println("[system]í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 			System.exit(0);
 			break;
 		default:
-			System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+			System.out.println("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
 			System.out.print(">> ");
 			num = s.nextInt();
 		}
@@ -745,31 +745,31 @@ public class MngSys {
 
 
 ////////////////////////////////////////////////////////////////////////////////////
-//--------------------------------------------------------------------Ãß°¡ Á¶È¸ ¼ºÀû
+//--------------------------------------------------------------------ì¶”ê°€ ì¡°íšŒ ì„±ì 
 	public void scoreSearch() {
 		System.out.print(">> ");
 		int num = s.nextInt();
 
 		switch (num) {
 		case 1:
-			//¼ö°­À¯Çüº° ¸Ş¼Òµå
+			//ìˆ˜ê°•ìœ í˜•ë³„ ë©”ì†Œë“œ
 			break;
 		case 2:
 			subsubMenu();
 			break;
 		case 0:
-			System.out.println("[system]ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+			System.out.println("[system]í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 			System.exit(0);
 			break;
 		default:
-			System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+			System.out.println("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
 			System.out.print(">> ");
 			num = s.nextInt();
 		}
 }
 
 ////////////////////////////////////////////////////////////////////////////////////
-//--------------------------------------------------------------------µî·Ï, ¼öÁ¤ »èÁ¦ »óÀ§¸Ş´º, Á¾·á
+//--------------------------------------------------------------------ë“±ë¡, ìˆ˜ì • ì‚­ì œ ìƒìœ„ë©”ë‰´, ì¢…ë£Œ
 
 	public void upperORexit01() {
 		System.out.print(">> ");
@@ -780,18 +780,18 @@ public class MngSys {
 			subMenu01();
 			break;
 		case 0:
-			System.out.println("[system]ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+			System.out.println("[system]í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 			System.exit(0);
 			break;
 		default:
-			System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+			System.out.println("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
 			System.out.print(">> ");
 			num = s.nextInt();
 		}
 	}
 
 ////////////////////////////////////////////////////////////////////////////////////
-//--------------------------------------------------------------------Á¶È¸ »óÀ§¸Ş´º, Á¾·á
+//--------------------------------------------------------------------ì¡°íšŒ ìƒìœ„ë©”ë‰´, ì¢…ë£Œ
 	public void upperORexit02() {
 		System.out.print(">> ");
 		int num = s.nextInt();
@@ -801,11 +801,11 @@ public class MngSys {
 			subsubMenu();
 			break;
 		case 0:
-			System.out.println("[system]ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+			System.out.println("[system]í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 			System.exit(0);
 			break;
 		default:
-			System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+			System.out.println("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
 			System.out.print(">> ");
 			num = s.nextInt();
 		}
@@ -814,7 +814,7 @@ public class MngSys {
 
 
 ////////////////////////////////////////////////////////////////////////////////////
-//--------------------------------------------------------------------¼ºÀû »óÀ§¸Ş´º, Á¾·á
+//--------------------------------------------------------------------ì„±ì  ìƒìœ„ë©”ë‰´, ì¢…ë£Œ
 	public void upperORexit03() {
 		System.out.print(">> ");
 		int num = s.nextInt();
@@ -824,11 +824,11 @@ public class MngSys {
 			subsubMenu02();
 			break;
 		case 0:
-			System.out.println("[system]ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+			System.out.println("[system]í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 			System.exit(0);
 			break;
 		default:
-			System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+			System.out.println("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
 			System.out.print(">> ");
 			num = s.nextInt();
 		}
@@ -836,30 +836,30 @@ public class MngSys {
 	}
 
 ///////////////////////////////////////////////////////////////////////////////////
-//-----------------------------------------------------------2¹ø Å¬¸¯½Ã ³ªÅ¸³ª´Â °³¼³°­ÁÂ¸ñ·Ï
+//-----------------------------------------------------------2ë²ˆ í´ë¦­ì‹œ ë‚˜íƒ€ë‚˜ëŠ” ê°œì„¤ê°•ì¢Œëª©ë¡
 	public void lectureMenu() {
-		System.out.println("[1] Ç®½ºÅÃ °³¹ßÀÚ ¾ç¼º°úÁ¤");
-		System.out.println("[2] ÃâÆÇµğÀÚÀÎ(µğÁöÅĞÆÛºí¸®½Ì)");
-		System.out.println("[3] È¯°æ(ÀÎÅ×¸®¾î) 3DµğÀÚÀÎ");
-		System.out.println("[4] AutoCAD Åõ»ó¹ı");
+		System.out.println("[1] í’€ìŠ¤íƒ ê°œë°œì ì–‘ì„±ê³¼ì •");
+		System.out.println("[2] ì¶œíŒë””ìì¸(ë””ì§€í„¸í¼ë¸”ë¦¬ì‹±)");
+		System.out.println("[3] í™˜ê²½(ì¸í…Œë¦¬ì–´) 3Dë””ìì¸");
+		System.out.println("[4] AutoCAD íˆ¬ìƒë²•");
 	}
 
 //////////////////////////////////////////////////////////////////////////////
-//--------------------------------------------------------------¸Ş´º½ÃÀÛ
-	public void start() {////////////////////////½ÃÀÛ
+//--------------------------------------------------------------ë©”ë‰´ì‹œì‘
+	public void start() {////////////////////////ì‹œì‘
 
 		while (true) {
 			System.out.println("[[MENU]]");
 			System.out.println("---------------");
-			System.out.println("[1] ¼ö°­»ı °ü¸®");
-			System.out.println("[2] °³¼³°­ÁÂ Á¶È¸");
-			System.out.println("[0] Á¾·á");
+			System.out.println("[1] ìˆ˜ê°•ìƒ ê´€ë¦¬");
+			System.out.println("[2] ê°œì„¤ê°•ì¢Œ ì¡°íšŒ");
+			System.out.println("[0] ì¢…ë£Œ");
 			System.out.println("----------------");
 			System.out.print(">> ");
 			int menuNum = s.nextInt();
 
 			if (menuNum < 0 || menuNum > 2) {
-				System.out.println("[system]Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+				System.out.println("[system]ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
 				System.out.println();
 				continue;
 			}
@@ -868,7 +868,7 @@ public class MngSys {
 
 			switch (menuNum) {
 			case 0:
-				System.out.println("[system]ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+				System.out.println("[system]í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 				System.exit(0);
 				break;
 			case 1:
@@ -882,23 +882,23 @@ public class MngSys {
 	}
 
 //////////////////////////////////////////////////////////////////////////////
-//-------------------------------------------------------------1¹ø ¼ö°­»ı °ü¸®
+//-------------------------------------------------------------1ë²ˆ ìˆ˜ê°•ìƒ ê´€ë¦¬
 
-	public void subMenu01() {//¼ö°­»ı °ü¸® ¸Ş´º
-			System.out.println("¼ö°­»ı °ü¸®");
+	public void subMenu01() {//ìˆ˜ê°•ìƒ ê´€ë¦¬ ë©”ë‰´
+			System.out.println("ìˆ˜ê°•ìƒ ê´€ë¦¬");
 			System.out.println("---------------");
-			System.out.println("[1] ¼ö°­»ı Á¶È¸");///////////Á¶È¸
-			System.out.println("[2] ¼ö°­»ı µî·Ï");//°ü¸®1
-			System.out.println("[3] ¼ö°­»ı ¼öÁ¤");//°ü¸®2
-			System.out.println("[4] ¼ö°­»ı »èÁ¦");//°ü¸®3
-			System.out.println("[5] ¼ºÀû°ü¸®");
-			System.out.println("[0] »óÀ§¸Ş´º");
+			System.out.println("[1] ìˆ˜ê°•ìƒ ì¡°íšŒ");///////////ì¡°íšŒ
+			System.out.println("[2] ìˆ˜ê°•ìƒ ë“±ë¡");//ê´€ë¦¬1
+			System.out.println("[3] ìˆ˜ê°•ìƒ ìˆ˜ì •");//ê´€ë¦¬2
+			System.out.println("[4] ìˆ˜ê°•ìƒ ì‚­ì œ");//ê´€ë¦¬3
+			System.out.println("[5] ì„±ì ê´€ë¦¬");
+			System.out.println("[0] ìƒìœ„ë©”ë‰´");
 			System.out.println("----------------");
 			System.out.print(">> ");
 			int subNum = s.nextInt();
 
 			if (subNum < 0 || subNum > 5) {
-				System.out.println("[system]Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+				System.out.println("[system]ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
 				System.out.println();
 				subMenu01();
 			}
@@ -928,23 +928,23 @@ public class MngSys {
 	}
 
 //////////////////////////////////////////////////////////////////////////////
-//--------------------------------------------------------------1-1 ¼ö°­»ıÁ¶È¸
+//--------------------------------------------------------------1-1 ìˆ˜ê°•ìƒì¡°íšŒ
 
 	public void subsubMenu() {
-			System.out.println("¼ö°­»ı °ü¸® - ¼ö°­»ı Á¶È¸");
+			System.out.println("ìˆ˜ê°•ìƒ ê´€ë¦¬ - ìˆ˜ê°•ìƒ ì¡°íšŒ");
 			System.out.println("---------------");
-			System.out.println("[1] ÀüÃ¼ ¼ö°­»ı Á¶È¸");
-			System.out.println("[2] °³ÀÎ ¼ö°­»ı Á¶È¸");
-			System.out.println("[3] ¼ö°­ À¯Çüº° Á¶È¸");
-			System.out.println("[4] °­ÁÂº° Á¶È¸");
-			System.out.println("[5] ¼ºÀû Á¶È¸");
-			System.out.println("[0] »óÀ§¸Ş´º");
+			System.out.println("[1] ì „ì²´ ìˆ˜ê°•ìƒ ì¡°íšŒ");
+			System.out.println("[2] ê°œì¸ ìˆ˜ê°•ìƒ ì¡°íšŒ");
+			System.out.println("[3] ìˆ˜ê°• ìœ í˜•ë³„ ì¡°íšŒ");
+			System.out.println("[4] ê°•ì¢Œë³„ ì¡°íšŒ");
+			System.out.println("[5] ì„±ì  ì¡°íšŒ");
+			System.out.println("[0] ìƒìœ„ë©”ë‰´");
 			System.out.println("----------------");
 			System.out.print(">> ");
 			int subsubNum = s.nextInt();
 
 			if (subsubNum < 0 || subsubNum > 5) {
-				System.out.println("[system]Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+				System.out.println("[system]ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
 				System.out.print(">> ");
 				subsubNum = s.nextInt();
 			}
@@ -952,9 +952,9 @@ public class MngSys {
 			System.out.println();
 			switch (subsubNum) {
 			case 1:
-				System.out.println("¼ö°­»ı °ü¸® - ¼ö°­»ı Á¶È¸ - ÀüÃ¼ ¼ö°­»ı Á¶È¸");
+				System.out.println("ìˆ˜ê°•ìƒ ê´€ë¦¬ - ìˆ˜ê°•ìƒ ì¡°íšŒ - ì „ì²´ ìˆ˜ê°•ìƒ ì¡°íšŒ");
 				System.out.println("---------------------------------------------------------");
-				System.out.println("ÃÑ ¼ö°­»ı ¼ö : " + stu.size() + "¸í");
+				System.out.println("ì´ ìˆ˜ê°•ìƒ ìˆ˜ : " + stu.size() + "ëª…");
 				printStu();
 				upperORexit();
 				upperORexit02();
@@ -979,19 +979,19 @@ public class MngSys {
 	}
 
 //////////////////////////////////////////////////////////////////////////////
-//--------------------------------------------------------------1-5 ¼ºÀû°ü¸®
+//--------------------------------------------------------------1-5 ì„±ì ê´€ë¦¬
 	public void subsubMenu02() {
-			System.out.println("¼ö°­»ı °ü¸® - ¼ºÀû°ü¸®");
+			System.out.println("ìˆ˜ê°•ìƒ ê´€ë¦¬ - ì„±ì ê´€ë¦¬");
 			System.out.println("---------------");
-			System.out.println("[1] ¼ºÀû ÀÔ·Â");
-			System.out.println("[2] ¼ºÀû Á¶È¸");
-			System.out.println("[0] »óÀ§¸Ş´º");
+			System.out.println("[1] ì„±ì  ì…ë ¥");
+			System.out.println("[2] ì„±ì  ì¡°íšŒ");
+			System.out.println("[0] ìƒìœ„ë©”ë‰´");
 			System.out.println("----------------");
 			System.out.print(">> ");
 			int subsubNum02 = s.nextInt();
 
 			if (subsubNum02 < 0 || subsubNum02 > 2) {
-				System.out.println("[system]Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+				System.out.println("[system]ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
 				System.out.println();
 				subsubMenu02();
 			}
@@ -1014,18 +1014,18 @@ public class MngSys {
 
 
 //////////////////////////////////////////////////////////////////////////////
-//-------------------------------------------------------------- 2 °³¼³°­ÁÂ¸ñ·Ï
+//-------------------------------------------------------------- 2 ê°œì„¤ê°•ì¢Œëª©ë¡
 
 	public void subMenu02() {
-			System.out.println("»ó¼¼ °­ÁÂ Á¤º¸ º¸±â(°­ÁÂÄÚµå ÀÔ·Â)");
-			System.out.println("---------------------------1----------");
+			System.out.println("ìƒì„¸ ê°•ì¢Œ ì •ë³´ ë³´ê¸°(ê°•ì¢Œì½”ë“œ ì…ë ¥)");
+			System.out.println("-------------------------------------");
 			lectureMenu();
 			System.out.println("-------------------------------------");
 			System.out.print(">> ");
 			int subNum2 = s.nextInt();
 
 			if (subNum2 < 0 || subNum2 > 4) {
-				System.out.println("[system]Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
+				System.out.println("[system]ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
 				System.out.println();
 				subMenu02();
 			}
