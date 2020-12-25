@@ -6,9 +6,7 @@ public class Class {
 	String time;
 	String classroom;
 	String date;
-
-	public Class() {}
-
+	
 	public Class(String name, String professor, String time, String classroom, String date) {
 		this.name = name;
 		this.professor = professor;
