@@ -152,6 +152,11 @@ public class MngSys {
 		System.out.println("----------------------------");
 		System.out.print(">> ");
 		int searchInt = s.nextInt();
+		
+		if (searchInt < 1 || searchInt > 4) {
+			System.out.println("[system]존재하지 않는 강좌코드입니다.");
+			printLec();
+		}
 
 		System.out.println("---------------------------------------------------------");
 
@@ -165,6 +170,17 @@ public class MngSys {
 			System.out.println("[system]해당 강좌를 수강하는 학생은 없습니다.");
 
 		System.out.println("---------------------------------------------------------");
+		
+		prnMenu();
+		System.out.print(">> ");
+		int num = s.nextInt();
+
+		if (num == 1)
+			printLec();
+		else
+			upper02(num);
+
+		System.out.println();
 
 	}
 
@@ -230,7 +246,7 @@ public class MngSys {
 		default:
 			System.out.println("잘못 입력하셨습니다.");
 			System.out.print(">> ");
-			num = s.nextInt();
+			upper02(s.nextInt());
 		}
 	}
 
@@ -248,7 +264,7 @@ public class MngSys {
 		default:
 			System.out.println("잘못 입력하셨습니다.");
 			System.out.print(">> ");
-			num = s.nextInt();
+			upper01(s.nextInt());
 		}
 	}
 
@@ -401,7 +417,7 @@ public class MngSys {
 			}
 		}
 		if (count == 0)
-			System.out.println(remStu + "(와)과 일치하는 학생이 없습니다.");
+			System.out.println(remStu + "(와)과 일치하는 수강생이 없습니다.");
 		else
 			System.out.println("\n[system]삭제가 완료되었습니다.");
 
@@ -481,6 +497,7 @@ public class MngSys {
 //---------------------------------------------------------------------------1-5-2 성적조회
 	public void searchScore() {
 		char pass;
+		int count = 0;
 
 		System.out.println("성적을 조회할 수강생의 이름을 입력하세요.");
 		System.out.print(">> ");
@@ -494,6 +511,7 @@ public class MngSys {
 			}
 
 			if (name.equals(stu.get(i).name)) {
+				count++;
 				if (stu.get(i).score == 0) {
 					System.out.println(name + " 수강생의 성적은 현재 '미입력'상태입니다.");
 					System.out.print("성적을 입력하시겠습니까?(Y/N) ");
@@ -501,12 +519,10 @@ public class MngSys {
 
 					if (ans == 'y' || ans == 'Y') {
 						System.out.println("---------------------");
-						insertScore02(name);
-						researchMenu();
+						insertScore02(name); return;
+					} else if (ans == 'n' || ans == 'N') {
 						return;
-					} else if (ans == 'n' || ans == 'N')
-						return;
-					else {
+					} else {
 						System.out.println("잘못 입력하셨습니다.");
 						return;
 					}
@@ -533,10 +549,11 @@ public class MngSys {
 					System.out.println("점수 : " + stu.get(i).score);
 					System.out.println("수료가능여부 : " + pass);
 					System.out.println("------------------------------------");
-					return;
 				}
 			}
 		}
+		
+		if (count == 0) System.out.println("[system]" + name + "(와)과 일치하는 수강생이 없습니다.");
 	}
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -556,6 +573,25 @@ public class MngSys {
 		else
 			upper01(num);
 	}
+	
+//////////////////////////////////////////////////////////////////////////////////////////
+//-------------------------------------------------------------------------------1-1-5 성적조회 마무리
+	public void researchMenu02() {
+		System.out.println("---------------");
+		System.out.println("[1] 추가조회");
+		System.out.println("[2] 상위메뉴");
+		System.out.println("[0] 종료");
+		System.out.println("---------------");
+
+		System.out.print(">> ");
+		int num = s.nextInt();
+
+		if (num == 1)
+			searchScore();
+		else
+			upper02(num);
+	}
+
 
 ////////////////////////////////////////////////////////////////////////////////////
 //------------------------------------------------------------------강의 목록(강의 추가시 여기로)
@@ -620,112 +656,112 @@ public class MngSys {
 
 	}
 
-////////////////////////////////////////////////////////////////////////////////////
-//--------------------------------------------------------------------추가조회
-	public void research() {
-		System.out.println("---------------");
-		System.out.println("[1] 추가조회");
-		System.out.println("[2] 상위메뉴");
-		System.out.println("[0] 종료");
-		System.out.println("---------------");
+//////////////////////////////////////////////////////////////////////////////////////
+////--------------------------------------------------------------------추가조회
+//	public void research() {
+//		System.out.println("---------------");
+//		System.out.println("[1] 추가조회");
+//		System.out.println("[2] 상위메뉴");
+//		System.out.println("[0] 종료");
+//		System.out.println("---------------");
+//
+//	}
 
-	}
-
-////////////////////////////////////////////////////////////////////////////////////
-//--------------------------------------------------------------------추가 조회 개인
-	public void prnSearch() {
-		System.out.print(">> ");
-		int num = s.nextInt();
-
-		switch (num) {
-		case 1:
-			// 개인조회 메소드
-			break;
-		case 2:
-			subsubMenu();
-			break;
-		case 0:
-			System.out.println("[system]프로그램을 종료합니다.");
-			System.exit(0);
-			break;
-		default:
-			System.out.println("잘못 입력하셨습니다.");
-			System.out.print(">> ");
-			num = s.nextInt();
-		}
-	}
-
-////////////////////////////////////////////////////////////////////////////////////
-//--------------------------------------------------------------------추가 조회 수강유형별
-	public void typeSearch() {
-		System.out.print(">> ");
-		int num = s.nextInt();
-
-		switch (num) {
-		case 1:
-			// 수강유형별 메소드
-			break;
-		case 2:
-			subsubMenu();
-			break;
-		case 0:
-			System.out.println("[system]프로그램을 종료합니다.");
-			System.exit(0);
-			break;
-		default:
-			System.out.println("잘못 입력하셨습니다.");
-			System.out.print(">> ");
-			num = s.nextInt();
-		}
-	}
-
-////////////////////////////////////////////////////////////////////////////////////
-//--------------------------------------------------------------------추가 조회 강좌별
-	public void lecSearch() {
-		System.out.print(">> ");
-		int num = s.nextInt();
-
-		switch (num) {
-		case 1:
-			// 강좌별 메소드
-			break;
-		case 2:
-			subsubMenu();
-			break;
-		case 0:
-			System.out.println("[system]프로그램을 종료합니다.");
-			System.exit(0);
-			break;
-		default:
-			System.out.println("잘못 입력하셨습니다.");
-			System.out.print(">> ");
-			num = s.nextInt();
-		}
-	}
-
-////////////////////////////////////////////////////////////////////////////////////
-//--------------------------------------------------------------------추가 조회 성적
-	public void scoreSearch() {
-		System.out.print(">> ");
-		int num = s.nextInt();
-
-		switch (num) {
-		case 1:
-			// 수강유형별 메소드
-			break;
-		case 2:
-			subsubMenu();
-			break;
-		case 0:
-			System.out.println("[system]프로그램을 종료합니다.");
-			System.exit(0);
-			break;
-		default:
-			System.out.println("잘못 입력하셨습니다.");
-			System.out.print(">> ");
-			num = s.nextInt();
-		}
-	}
+//////////////////////////////////////////////////////////////////////////////////////
+////--------------------------------------------------------------------추가 조회 개인
+//	public void prnSearch() {
+//		System.out.print(">> ");
+//		int num = s.nextInt();
+//
+//		switch (num) {
+//		case 1:
+//			// 개인조회 메소드
+//			break;
+//		case 2:
+//			subsubMenu();
+//			break;
+//		case 0:
+//			System.out.println("[system]프로그램을 종료합니다.");
+//			System.exit(0);
+//			break;
+//		default:
+//			System.out.println("잘못 입력하셨습니다.");
+//			System.out.print(">> ");
+//			num = s.nextInt();
+//		}
+//	}
+//
+//////////////////////////////////////////////////////////////////////////////////////
+////--------------------------------------------------------------------추가 조회 수강유형별
+//	public void typeSearch() {
+//		System.out.print(">> ");
+//		int num = s.nextInt();
+//
+//		switch (num) {
+//		case 1:
+//			// 수강유형별 메소드
+//			break;
+//		case 2:
+//			subsubMenu();
+//			break;
+//		case 0:
+//			System.out.println("[system]프로그램을 종료합니다.");
+//			System.exit(0);
+//			break;
+//		default:
+//			System.out.println("잘못 입력하셨습니다.");
+//			System.out.print(">> ");
+//			num = s.nextInt();
+//		}
+//	}
+//
+//////////////////////////////////////////////////////////////////////////////////////
+////--------------------------------------------------------------------추가 조회 강좌별
+//	public void lecSearch() {
+//		System.out.print(">> ");
+//		int num = s.nextInt();
+//
+//		switch (num) {
+//		case 1:
+//			// 강좌별 메소드
+//			break;
+//		case 2:
+//			subsubMenu();
+//			break;
+//		case 0:
+//			System.out.println("[system]프로그램을 종료합니다.");
+//			System.exit(0);
+//			break;
+//		default:
+//			System.out.println("잘못 입력하셨습니다.");
+//			System.out.print(">> ");
+//			num = s.nextInt();
+//		}
+//	}
+//
+//////////////////////////////////////////////////////////////////////////////////////
+////--------------------------------------------------------------------추가 조회 성적
+//	public void scoreSearch() {
+//		System.out.print(">> ");
+//		int num = s.nextInt();
+//
+//		switch (num) {
+//		case 1:
+//			// 수강유형별 메소드
+//			break;
+//		case 2:
+//			subsubMenu();
+//			break;
+//		case 0:
+//			System.out.println("[system]프로그램을 종료합니다.");
+//			System.exit(0);
+//			break;
+//		default:
+//			System.out.println("잘못 입력하셨습니다.");
+//			System.out.print(">> ");
+//			num = s.nextInt();
+//		}
+//	}
 
 ////////////////////////////////////////////////////////////////////////////////////
 //--------------------------------------------------------------------등록, 수정 삭제 상위메뉴, 종료
@@ -744,8 +780,7 @@ public class MngSys {
 			break;
 		default:
 			System.out.println("잘못 입력하셨습니다.");
-			System.out.print(">> ");
-			num = s.nextInt();
+			upperORexit01();
 		}
 	}
 
@@ -765,8 +800,7 @@ public class MngSys {
 			break;
 		default:
 			System.out.println("잘못 입력하셨습니다.");
-			System.out.print(">> ");
-			num = s.nextInt();
+			upperORexit02();
 		}
 
 	}
@@ -787,8 +821,7 @@ public class MngSys {
 			break;
 		default:
 			System.out.println("잘못 입력하셨습니다.");
-			System.out.print(">> ");
-			num = s.nextInt();
+			upperORexit03();
 		}
 
 	}
@@ -928,7 +961,7 @@ public class MngSys {
 			break;
 		case 5:
 			searchScore();
-			researchMenu();
+			researchMenu02();
 			break;
 		case 0:
 			subMenu01();
@@ -960,10 +993,11 @@ public class MngSys {
 			insertScore();
 			upperORexit();
 			upperORexit03();
+			break;
 		case 2:
 			searchScore();
-			upperORexit();
-			upperORexit03();
+			researchMenu();
+			break;
 		case 0:
 			subMenu01();
 			break;
