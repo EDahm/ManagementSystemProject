@@ -7,9 +7,6 @@ public class Test {
 
 		s.currentStudent();
 		s.start();
-		s.printStu();
-
-
+		
 	}
-
 }
