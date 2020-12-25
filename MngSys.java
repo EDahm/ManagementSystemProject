@@ -167,7 +167,7 @@ public class MngSys {
 			}
 		}
 		if (count == 0)
-			System.out.println("[system]해당 강좌를 수강하는 학생은 없습니다.");
+			System.out.println("[system]해당 강좌를 수강 중인 수강생은 없습니다.");
 
 		System.out.println("---------------------------------------------------------");
 		
@@ -200,7 +200,7 @@ public class MngSys {
 			}
 		}
 		if (count == 0)
-			System.out.println("[system]해당 강좌를 수강하는 학생은 없습니다.");
+			System.out.println("[system]해당 강좌를 수강 중인 수강생은 없습니다.");
 
 		System.out.println("---------------------------------------------------------");
 
