@@ -58,7 +58,7 @@ public class MngSys {
 //---------------------------------------------------------------------------1-1-2개인 조회
 	public void searchPer() {
 		int count = 0;
-		System.out.println("조회할 학생의 이름을 입력해 주세요.");
+		System.out.println("조회할 수강생의 이름을 입력해 주세요.");
 		System.out.print(">> ");
 		String searchStr = s.next();
 		System.out.println("---------------------------------------------------------");
@@ -70,7 +70,7 @@ public class MngSys {
 
 		}
 		if (count == 0)
-			System.out.println("[system]해당하는 학생은 없습니다.");
+			System.out.println("[system]해당 수강생은 존재하지 않습니다.");
 		System.out.println("---------------------------------------------------------");
 
 		prnMenu();
