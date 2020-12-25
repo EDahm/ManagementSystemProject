@@ -31,8 +31,8 @@ public class MngSys {
 		System.out.println("---------------------------------------------------------");
 
 		for (int i = 0; i < stu.size(); i++) {
-			System.out.print(stu.get(i).name + "/" + stu.get(i).gender + "/" + stu.get(i).birth
-					+ "/" + stu.get(i).phnum + "/" + stu.get(i).type + "/");
+			System.out.print(stu.get(i).name + "/" + stu.get(i).gender + "/" + stu.get(i).birth + "/" + stu.get(i).phnum
+					+ "/" + stu.get(i).type + "/");
 
 			switch (stu.get(i).lecture) {
 			case 01:
@@ -42,7 +42,7 @@ public class MngSys {
 				System.out.println("출판디자인(디지털퍼블리싱)");
 				break;
 			case 03:
-				System.out.println("출판디자인(디지털퍼블리싱)");
+				System.out.println("환경(인테리어) 3D디자인");
 				break;
 			case 04:
 				System.out.println("AutoCAD 투상법");
@@ -53,8 +53,6 @@ public class MngSys {
 		System.out.println("---------------------------------------------------------");
 
 	}
-
-
 
 ////////////////////////////////////////////////////////////////////////////////////////
 //---------------------------------------------------------------------------1-1-2개인 조회
@@ -70,7 +68,9 @@ public class MngSys {
 				count++;
 			}
 
-		} if (count == 0) System.out.println("[system]해당하는 학생은 없습니다.");
+		}
+		if (count == 0)
+			System.out.println("[system]해당하는 학생은 없습니다.");
 		System.out.println("---------------------------------------------------------");
 
 		prnMenu();
@@ -86,7 +86,6 @@ public class MngSys {
 
 	}
 
-
 /////////////////////////////////////////////////////////////////////////////////////////
 //--------------------------------------------------------------------------1-1-2 개인조회
 	public void prnPer(int i) {
@@ -101,18 +100,14 @@ public class MngSys {
 			System.out.println("출판디자인(디지털퍼블리싱)");
 			break;
 		case 03:
-			System.out.println("출판디자인(디지털퍼블리싱)");
+			System.out.println("환경(인테리어) 3D디자인");
 			break;
 		case 04:
 			System.out.println("AutoCAD 투상법");
 			break;
 		}
 
-
 	}
-
-
-
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 //------------------------------------------------------------------------1-1-3 수강유형별
@@ -145,116 +140,99 @@ public class MngSys {
 
 		System.out.println();
 
+	}
+
+////////////////////////////////////////////////////////////////////////////////////////
+//-----------------------------------------------------1-1-4 강좌별
+	public void printLec() {
+		int count = 0;
+		System.out.println("조회할 강좌코드를 입력해 주세요.");
+		System.out.println("----------------------------");
+		lectureMenu();
+		System.out.println("----------------------------");
+		System.out.print(">> ");
+		int searchInt = s.nextInt();
+
+		System.out.println("---------------------------------------------------------");
+
+		for (int i = 0; i < stu.size(); i++) {
+			if (stu.get(i).lecture == searchInt) {
+				prnPer(i);
+				count++;
+			}
+		}
+		if (count == 0)
+			System.out.println("[system]해당 강좌를 수강하는 학생은 없습니다.");
+
+		System.out.println("---------------------------------------------------------");
 
 	}
 
-
-
-
-////////////////////////////////////////////////////////////////////////////////////////
-//-----------------------------------------------------1-1-4 강좌별
-		public void printLec() {
-			int count = 0;
-			System.out.println("조회할 강좌코드를 입력해 주세요.");
-			System.out.println("----------------------------");
-			lectureMenu();
-			System.out.println("----------------------------");
-			System.out.print(">> ");
-			int searchInt = s.nextInt();
-
-			System.out.println("---------------------------------------------------------");
-
-			for (int i = 0; i < stu.size(); i++) {
-				if (stu.get(i).lecture == searchInt) {
-					prnPer(i);
-					count++;
-				}
-			}
-			if (count == 0)
-				System.out.println("[system]해당 강좌를 수강하는 학생은 없습니다.");
-
-			System.out.println("---------------------------------------------------------");
-
-		}
-
-
-
-
-
 ////////////////////////////////////////////////////////////////////////////////////////
 //-----------------------------------------------------1-1-4 강좌별
 
-		public void printLec02(int num) {
-			int count = 0;
-			int searchInt = num;
+	public void printLec02(int num) {
+		int count = 0;
+		int searchInt = num;
 
-			System.out.println("---------------------------------------------------------");
+		System.out.println("---------------------------------------------------------");
 
-			for (int i = 0; i < stu.size(); i++) {
-				if (stu.get(i).lecture == searchInt) {
-					prnPer(i);
-					count++;
-				}
+		for (int i = 0; i < stu.size(); i++) {
+			if (stu.get(i).lecture == searchInt) {
+				prnPer(i);
+				count++;
 			}
-			if (count == 0)
-				System.out.println("[system]해당 강좌를 수강하는 학생은 없습니다.");
-
-			System.out.println("---------------------------------------------------------");
-
 		}
+		if (count == 0)
+			System.out.println("[system]해당 강좌를 수강하는 학생은 없습니다.");
 
+		System.out.println("---------------------------------------------------------");
 
-
+	}
 
 ///////////////////////////////////////////////////////////////////////////////////////
 //--------------------------------------------------강좌별 조회 마무리 1
-		public void endLec() {
-			prnMenu();
-			System.out.print(">> ");
-			int num = s.nextInt();
+	public void endLec() {
+		prnMenu();
+		System.out.print(">> ");
+		int num = s.nextInt();
 
-			if (num == 1)
-				printLec();
-			else
-				upper02(num);
+		if (num == 1)
+			printLec();
+		else
+			upper02(num);
 
-			System.out.println();
-		}
-
-
-
+		System.out.println();
+	}
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //------------------------------------------------------------------------1-1 수강생조회 마무리
-		public void prnMenu() {
-			System.out.println("---------------");
-			System.out.println("[1] 추가조회");
-			System.out.println("[2] 상위메뉴");
-			System.out.println("[0] 종료");
-			System.out.println("---------------");
+	public void prnMenu() {
+		System.out.println("---------------");
+		System.out.println("[1] 추가조회");
+		System.out.println("[2] 상위메뉴");
+		System.out.println("[0] 종료");
+		System.out.println("---------------");
 
-		}
-
-
+	}
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //----------------------------------------------------------------------------1-1 수강생조회 마무리
-		public void upper02(int num) {
-			switch (num) {
-			case 2:
-				subsubMenu();
-				break;
-			case 0:
-				System.out.println("[system]프로그램을 종료합니다.");
-				System.exit(0);
-				break;
-			default:
-				System.out.println("잘못 입력하셨습니다.");
-				System.out.print(">> ");
-				num = s.nextInt();
-			}
+	public void upper02(int num) {
+		switch (num) {
+		case 2:
+			subsubMenu();
+			break;
+		case 0:
+			System.out.println("[system]프로그램을 종료합니다.");
+			System.exit(0);
+			break;
+		default:
+			System.out.println("잘못 입력하셨습니다.");
+			System.out.print(">> ");
+			num = s.nextInt();
 		}
-
+	}
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 //-------------------------------------------------------------------------1상위메뉴 
@@ -321,18 +299,12 @@ public class MngSys {
 		System.out.print(">> ");
 		int num = s.nextInt();
 
-		if (num == 1) addStudent();
-		else upper01(num);
+		if (num == 1)
+			addStudent();
+		else
+			upper01(num);
 
 	}
-
-
-
-
-
-
-
-
 
 //////////////////////////////////////////////////////////////////////////////////////
 //----------------------------------------------------------------1-3 수강생 수정
@@ -392,7 +364,7 @@ public class MngSys {
 				printStu();
 				break;
 			}
-			
+
 		}
 		if (count == 0)
 			System.out.println(setStu + "는(은) 수강생이 아닙니다.");
@@ -406,9 +378,10 @@ public class MngSys {
 		System.out.print(">> ");
 		int num = s.nextInt();
 
-		if (num == 1) resetStu();
-		else upper01(num);
-
+		if (num == 1)
+			resetStu();
+		else
+			upper01(num);
 
 	}
 
@@ -420,18 +393,18 @@ public class MngSys {
 		System.out.print("삭제할 수강생의 이름을 입력해주세요>> ");
 		String remStu = s.next();
 		int count = 0;
-		
+
 		for (int i = 0; i < stu.size(); i++) {
 			if (stu.get(i).name.equals(remStu)) {
 				stu.remove(i);
 				count++;
-			}		
+			}
 		}
-		if (count == 0 )
+		if (count == 0)
 			System.out.println(remStu + "(와)과 일치하는 학생이 없습니다.");
 		else
 			System.out.println("\n[system]삭제가 완료되었습니다.");
-		
+
 		printStu();
 
 		System.out.println("---------------");
@@ -443,11 +416,11 @@ public class MngSys {
 		System.out.print(">> ");
 		int num = s.nextInt();
 
-		if (num == 1) removeStu();
-		else upper01(num);
+		if (num == 1)
+			removeStu();
+		else
+			upper01(num);
 	}
-
-
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //---------------------------------------------------------------------------1-5-1 성적입력
@@ -478,12 +451,12 @@ public class MngSys {
 		System.out.print(">> ");
 		int num = s.nextInt();
 
-		if (num == 1) insertScore();
-		else upper01(num);
+		if (num == 1)
+			insertScore();
+		else
+			upper01(num);
 
 	}
-
-
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //---------------------------------------------------------------------------1-5-1 성적입력
@@ -503,10 +476,6 @@ public class MngSys {
 		System.out.println("[system]성적 입력이 완료되었습니다.");
 
 	}
-
-
-
-
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //---------------------------------------------------------------------------1-5-2 성적조회
@@ -530,19 +499,19 @@ public class MngSys {
 					System.out.print("성적을 입력하시겠습니까?(Y/N) ");
 					char ans = s.next().charAt(0);
 
-					if(ans == 'y' || ans == 'Y') {
+					if (ans == 'y' || ans == 'Y') {
 						System.out.println("---------------------");
 						insertScore02(name);
 						researchMenu();
 						return;
-					}
-					else if(ans == 'n' || ans == 'N') return;
-					else
+					} else if (ans == 'n' || ans == 'N')
+						return;
+					else {
 						System.out.println("잘못 입력하셨습니다.");
 						return;
-
 					}
-					else {
+
+				} else {
 					System.out.println("------------------------------------");
 					System.out.println("이름 : " + stu.get(i).name);
 
@@ -554,7 +523,7 @@ public class MngSys {
 						System.out.println("수강중인 강좌 : 출판디자인(디지털퍼블리싱)");
 						break;
 					case 03:
-						System.out.println("수강중인 강좌 : 출판디자인(디지털퍼블리싱)");
+						System.out.println("수강중인 강좌 : 환경(인테리어) 3D디자인");
 						break;
 					case 04:
 						System.out.println("수강중인 강좌 : AutoCAD 투상법");
@@ -566,12 +535,9 @@ public class MngSys {
 					System.out.println("------------------------------------");
 					return;
 				}
-		}
+			}
 		}
 	}
-
-
-
 
 //////////////////////////////////////////////////////////////////////////////////////////
 //-------------------------------------------------------------------------------성적조회 마무리
@@ -625,9 +591,9 @@ public class MngSys {
 
 		System.out.println();
 		switch (pcNum) {
-			case 1:
-				printLec02(num);
-				break;
+		case 1:
+			printLec02(num);
+			break;
 		case 2:
 			subMenu02();
 			break;
@@ -665,8 +631,6 @@ public class MngSys {
 
 	}
 
-
-
 ////////////////////////////////////////////////////////////////////////////////////
 //--------------------------------------------------------------------추가 조회 개인
 	public void prnSearch() {
@@ -675,7 +639,7 @@ public class MngSys {
 
 		switch (num) {
 		case 1:
-			//개인조회 메소드
+			// 개인조회 메소드
 			break;
 		case 2:
 			subsubMenu();
@@ -690,7 +654,6 @@ public class MngSys {
 			num = s.nextInt();
 		}
 	}
-
 
 ////////////////////////////////////////////////////////////////////////////////////
 //--------------------------------------------------------------------추가 조회 수강유형별
@@ -700,7 +663,7 @@ public class MngSys {
 
 		switch (num) {
 		case 1:
-			//수강유형별 메소드
+			// 수강유형별 메소드
 			break;
 		case 2:
 			subsubMenu();
@@ -716,8 +679,6 @@ public class MngSys {
 		}
 	}
 
-
-
 ////////////////////////////////////////////////////////////////////////////////////
 //--------------------------------------------------------------------추가 조회 강좌별
 	public void lecSearch() {
@@ -726,7 +687,7 @@ public class MngSys {
 
 		switch (num) {
 		case 1:
-			//강좌별 메소드
+			// 강좌별 메소드
 			break;
 		case 2:
 			subsubMenu();
@@ -740,9 +701,7 @@ public class MngSys {
 			System.out.print(">> ");
 			num = s.nextInt();
 		}
-}	
-
-
+	}
 
 ////////////////////////////////////////////////////////////////////////////////////
 //--------------------------------------------------------------------추가 조회 성적
@@ -752,7 +711,7 @@ public class MngSys {
 
 		switch (num) {
 		case 1:
-			//수강유형별 메소드
+			// 수강유형별 메소드
 			break;
 		case 2:
 			subsubMenu();
@@ -766,7 +725,7 @@ public class MngSys {
 			System.out.print(">> ");
 			num = s.nextInt();
 		}
-}
+	}
 
 ////////////////////////////////////////////////////////////////////////////////////
 //--------------------------------------------------------------------등록, 수정 삭제 상위메뉴, 종료
@@ -812,7 +771,6 @@ public class MngSys {
 
 	}
 
-
 ////////////////////////////////////////////////////////////////////////////////////
 //--------------------------------------------------------------------성적 상위메뉴, 종료
 	public void upperORexit03() {
@@ -846,7 +804,7 @@ public class MngSys {
 
 //////////////////////////////////////////////////////////////////////////////
 //--------------------------------------------------------------메뉴시작
-	public void start() {////////////////////////시작
+	public void start() {//////////////////////// 시작
 
 		while (true) {
 			System.out.println("[[MENU]]");
@@ -884,161 +842,160 @@ public class MngSys {
 //////////////////////////////////////////////////////////////////////////////
 //-------------------------------------------------------------1번 수강생 관리
 
-	public void subMenu01() {//수강생 관리 메뉴
-			System.out.println("수강생 관리");
-			System.out.println("---------------");
-			System.out.println("[1] 수강생 조회");///////////조회
-			System.out.println("[2] 수강생 등록");//관리1
-			System.out.println("[3] 수강생 수정");//관리2
-			System.out.println("[4] 수강생 삭제");//관리3
-			System.out.println("[5] 성적관리");
-			System.out.println("[0] 상위메뉴");
-			System.out.println("----------------");
-			System.out.print(">> ");
-			int subNum = s.nextInt();
+	public void subMenu01() {// 수강생 관리 메뉴
+		System.out.println("수강생 관리");
+		System.out.println("---------------");
+		System.out.println("[1] 수강생 조회");/////////// 조회
+		System.out.println("[2] 수강생 등록");// 관리1
+		System.out.println("[3] 수강생 수정");// 관리2
+		System.out.println("[4] 수강생 삭제");// 관리3
+		System.out.println("[5] 성적관리");
+		System.out.println("[0] 상위메뉴");
+		System.out.println("----------------");
+		System.out.print(">> ");
+		int subNum = s.nextInt();
 
-			if (subNum < 0 || subNum > 5) {
-				System.out.println("[system]잘못 입력하셨습니다.");
-				System.out.println();
-				subMenu01();
-			}
-
+		if (subNum < 0 || subNum > 5) {
+			System.out.println("[system]잘못 입력하셨습니다.");
 			System.out.println();
+			subMenu01();
+		}
 
-			switch (subNum) {
-			case 1:
-				subsubMenu();
-				break;
-			case 2:
-				addStudent();
-				break;
-			case 3:
-				resetStu();
-				break;
-			case 4:
-				removeStu();
-				break;
-			case 5:
-				subsubMenu02();
-				break;
-			case 0:
-				start();
-				break;
-			}
+		System.out.println();
+
+		switch (subNum) {
+		case 1:
+			subsubMenu();
+			break;
+		case 2:
+			addStudent();
+			break;
+		case 3:
+			resetStu();
+			break;
+		case 4:
+			removeStu();
+			break;
+		case 5:
+			subsubMenu02();
+			break;
+		case 0:
+			start();
+			break;
+		}
 	}
 
 //////////////////////////////////////////////////////////////////////////////
 //--------------------------------------------------------------1-1 수강생조회
 
 	public void subsubMenu() {
-			System.out.println("수강생 관리 - 수강생 조회");
-			System.out.println("---------------");
-			System.out.println("[1] 전체 수강생 조회");
-			System.out.println("[2] 개인 수강생 조회");
-			System.out.println("[3] 수강 유형별 조회");
-			System.out.println("[4] 강좌별 조회");
-			System.out.println("[5] 성적 조회");
-			System.out.println("[0] 상위메뉴");
-			System.out.println("----------------");
+		System.out.println("수강생 관리 - 수강생 조회");
+		System.out.println("---------------");
+		System.out.println("[1] 전체 수강생 조회");
+		System.out.println("[2] 개인 수강생 조회");
+		System.out.println("[3] 수강 유형별 조회");
+		System.out.println("[4] 강좌별 조회");
+		System.out.println("[5] 성적 조회");
+		System.out.println("[0] 상위메뉴");
+		System.out.println("----------------");
+		System.out.print(">> ");
+		int subsubNum = s.nextInt();
+
+		if (subsubNum < 0 || subsubNum > 5) {
+			System.out.println("[system]잘못 입력하셨습니다.");
 			System.out.print(">> ");
-			int subsubNum = s.nextInt();
+			subsubNum = s.nextInt();
+		}
 
-			if (subsubNum < 0 || subsubNum > 5) {
-				System.out.println("[system]잘못 입력하셨습니다.");
-				System.out.print(">> ");
-				subsubNum = s.nextInt();
-			}
-
-			System.out.println();
-			switch (subsubNum) {
-			case 1:
-				System.out.println("수강생 관리 - 수강생 조회 - 전체 수강생 조회");
-				System.out.println("---------------------------------------------------------");
-				System.out.println("총 수강생 수 : " + stu.size() + "명");
-				printStu();
-				upperORexit();
-				upperORexit02();
-				break;
-			case 2:
-				searchPer();
-				break;
-			case 3:
-				printType();
-				break;
-			case 4:
-				printLec();
-				break;
-			case 5:
-				searchScore();
-				researchMenu();
-				break;
-			case 0:
-				subMenu01();
-				break;
-			}
+		System.out.println();
+		switch (subsubNum) {
+		case 1:
+			System.out.println("수강생 관리 - 수강생 조회 - 전체 수강생 조회");
+			System.out.println("---------------------------------------------------------");
+			System.out.println("총 수강생 수 : " + stu.size() + "명");
+			printStu();
+			upperORexit();
+			upperORexit02();
+			break;
+		case 2:
+			searchPer();
+			break;
+		case 3:
+			printType();
+			break;
+		case 4:
+			printLec();
+			break;
+		case 5:
+			searchScore();
+			researchMenu();
+			break;
+		case 0:
+			subMenu01();
+			break;
+		}
 	}
 
 //////////////////////////////////////////////////////////////////////////////
 //--------------------------------------------------------------1-5 성적관리
 	public void subsubMenu02() {
-			System.out.println("수강생 관리 - 성적관리");
-			System.out.println("---------------");
-			System.out.println("[1] 성적 입력");
-			System.out.println("[2] 성적 조회");
-			System.out.println("[0] 상위메뉴");
-			System.out.println("----------------");
-			System.out.print(">> ");
-			int subsubNum02 = s.nextInt();
+		System.out.println("수강생 관리 - 성적관리");
+		System.out.println("---------------");
+		System.out.println("[1] 성적 입력");
+		System.out.println("[2] 성적 조회");
+		System.out.println("[0] 상위메뉴");
+		System.out.println("----------------");
+		System.out.print(">> ");
+		int subsubNum02 = s.nextInt();
 
-			if (subsubNum02 < 0 || subsubNum02 > 2) {
-				System.out.println("[system]잘못 입력하셨습니다.");
-				System.out.println();
-				subsubMenu02();
-			}
-
+		if (subsubNum02 < 0 || subsubNum02 > 2) {
+			System.out.println("[system]잘못 입력하셨습니다.");
 			System.out.println();
-			switch (subsubNum02) {
-			case 1:
-				insertScore();
-				upperORexit();
-				upperORexit03();
-			case 2:
-				searchScore();
-				upperORexit();
-				upperORexit03();
-			case 0:
-				subMenu01();
-				break;
-			}
-	}
+			subsubMenu02();
+		}
 
+		System.out.println();
+		switch (subsubNum02) {
+		case 1:
+			insertScore();
+			upperORexit();
+			upperORexit03();
+		case 2:
+			searchScore();
+			upperORexit();
+			upperORexit03();
+		case 0:
+			subMenu01();
+			break;
+		}
+	}
 
 //////////////////////////////////////////////////////////////////////////////
 //-------------------------------------------------------------- 2 개설강좌목록
 
 	public void subMenu02() {
-			System.out.println("상세 강좌 정보 보기(강좌코드 입력)");
-			System.out.println("-------------------------------------");
-			lectureMenu();
-			System.out.println("-------------------------------------");
-			System.out.print(">> ");
-			int subNum2 = s.nextInt();
+		System.out.println("상세 강좌 정보 보기(강좌코드 입력)");
+		System.out.println("-------------------------------------");
+		lectureMenu();
+		System.out.println("-------------------------------------");
+		System.out.print(">> ");
+		int subNum2 = s.nextInt();
 
-			if (subNum2 < 0 || subNum2 > 4) {
-				System.out.println("[system]잘못 입력하셨습니다.");
-				System.out.println();
-				subMenu02();
-			}
-
+		if (subNum2 < 0 || subNum2 > 4) {
+			System.out.println("[system]잘못 입력하셨습니다.");
 			System.out.println();
-			if (subNum2 == 0) {
-				start();
-			}
-
-			if (subNum2 >= 1 && subNum2 <= 4) {
-				classList();
-				printClass(subNum2);
-			}
-
+			subMenu02();
 		}
-} 
+
+		System.out.println();
+		if (subNum2 == 0) {
+			start();
+		}
+
+		if (subNum2 >= 1 && subNum2 <= 4) {
+			classList();
+			printClass(subNum2);
+		}
+
+	}
+}
