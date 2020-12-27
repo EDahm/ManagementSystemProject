@@ -426,6 +426,12 @@ public class MngSys {
 					continue;
 				}
 
+				if (setM == 6) {
+					lectureMenu();
+					System.out.print("강의번호 선택>> ");
+					stu.get(i).lecture = s.nextInt();
+				}
+				
 				System.out.println("수정할 값을 입력해주세요.");
 				System.out.print(">> ");
 
@@ -444,11 +450,6 @@ public class MngSys {
 					break;
 				case 5:
 					stu.get(i).type = s.next();
-					break;
-				case 6:
-					lectureMenu();
-					System.out.print("강의번호 선택>> ");
-					stu.get(i).lecture = s.nextInt();
 					break;
 				}
 
